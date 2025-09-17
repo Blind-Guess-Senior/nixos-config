@@ -3,7 +3,7 @@
 {
   programs.vscode = {
     enable = true;
-    extensions = with pkgs.vscode-extensions; [
+    profiles.default.extensions = with pkgs.vscode-extensions; [
       xaver.clang-format
       
       ms-vscode-remote.remote-containers

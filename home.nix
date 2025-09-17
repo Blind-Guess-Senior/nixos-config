@@ -16,6 +16,7 @@
     obsidian
     microsoft-edge
     moonlight-qt
+    libreoffice
 
     kdePackages.yakuake
 
