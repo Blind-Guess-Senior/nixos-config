@@ -9,5 +9,11 @@
     delta.enable = true;
 
     lfs.enable = true;
+
+    extraConfig = {
+      core = {
+        editor = "nvim";
+      };
+    };
   };
 }
