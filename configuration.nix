@@ -10,6 +10,8 @@
       ./hardware-configuration.nix
     ];
 
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -110,6 +112,7 @@
     neovim
     tree
     git
+    libarchive
 
     zsh
     fish
@@ -130,6 +133,7 @@
     hardinfo2
     wayland-utils
     wl-clipboard
+    iw
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

@@ -7,6 +7,7 @@
   imports = [ 
     ./modules/home/vscode
     ./modules/home/git
+    ./modules/home/direnv
   ];
 
   home.packages = with pkgs; [
@@ -24,12 +25,16 @@
     jetbrains.rider
     jetbrains.pycharm-professional
 
+    #aseprite
+
     waydroid
     waydroid-helper
 
     feishu
     telegram-desktop
     #discord
+    #qq
+    #wechat-uos
 
     #steamcmd
 
