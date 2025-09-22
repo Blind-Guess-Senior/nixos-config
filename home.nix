@@ -8,7 +8,10 @@
     ./modules/home/vscode
     ./modules/home/git
     ./modules/home/direnv
+    ./modules/home/fish
   ];
+
+  fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
     pandoc
@@ -18,6 +21,10 @@
     microsoft-edge
     moonlight-qt
     libreoffice
+
+    gnumake
+    cmake
+    ninja
 
     kdePackages.yakuake
 
@@ -29,6 +36,11 @@
 
     waydroid
     waydroid-helper
+
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-cjk-serif
+    noto-fonts-color-emoji
 
     feishu
     telegram-desktop
@@ -47,7 +59,7 @@
     flameshot
 
     clash-verge-rev
-    
+
     unityhub
   ];
 

@@ -92,6 +92,10 @@
       "docker"
     ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
+      libgcc
+      libclang
+      gcc
+      clang
     ];
   };
 
@@ -117,9 +121,17 @@
     zsh
     fish
 
+    libgcc
+    libclang
+
+    gnumake
+    cmake
+    ninja
+
     neofetch
     fastfetch
     btop
+    ripgrep
 
     # KDE
     kdePackages.kcalc

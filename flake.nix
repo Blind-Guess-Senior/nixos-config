@@ -13,8 +13,8 @@
   };
 
   outputs = inputs@{ 
-    self, 
-    nixpkgs, 
+    self,
+    nixpkgs,
     home-manager,
     ... 
   }:

@@ -12,6 +12,7 @@
       
       ocamllabs.ocaml-platform
       jnoortheen.nix-ide
+      ms-vscode.cpptools
     ];
   };
 }
