@@ -43,7 +43,6 @@
     noto-fonts-color-emoji
 
     feishu
-    telegram-desktop
     #discord
     #qq
     #wechat-uos
