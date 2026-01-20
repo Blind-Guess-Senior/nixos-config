@@ -35,17 +35,16 @@
 
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
-  	    home-manager.useUserPackages = true;
-
-	    home-manager.users.${settings.username} = {
+            home-manager.useUserPackages = true;
+  
+            home-manager.users.${settings.username} = {
               imports = [
-	        ./home.nix
+                ./home.nix
+              ];
+            };
+            home-manager.extraSpecialArgs = arguments;
+          }
 	      ];
-	    };
-	    home-manager.extraSpecialArgs = arguments;
-
-	  }
-	];
       };
     };
   };

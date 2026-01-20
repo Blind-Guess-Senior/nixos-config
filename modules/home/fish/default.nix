@@ -3,7 +3,7 @@
 {
   programs.fish = {
     shellAbbrs = {
-      "osupd" = "sudo nixos-rebuild switch";
+      osupd = "sudo nixos-rebuild switch";
     };
 
     shellInit = ''

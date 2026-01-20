@@ -44,7 +44,7 @@
 
     feishu
     #discord
-    #qq
+    qq
     #wechat-uos
 
     #steamcmd
