@@ -4,11 +4,12 @@
   home.username = settings.username;
   home.homeDirectory = "/home/${settings.username}";
 
-  imports = [ 
+  imports = [
     ./modules/home/vscode
     ./modules/home/git
     ./modules/home/direnv
     ./modules/home/fish
+    #./modules/home/jetbrains-rider
   ];
 
   fonts.fontconfig.enable = true;
@@ -16,7 +17,7 @@
   home.packages = with pkgs; [
     pandoc
     thunderbird
-    
+
     obsidian
     microsoft-edge
     moonlight-qt
@@ -29,7 +30,6 @@
     kdePackages.yakuake
 
     jetbrains.clion
-    jetbrains.rider
     jetbrains.pycharm-professional
 
     #aseprite
