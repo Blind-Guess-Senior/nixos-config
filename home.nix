@@ -9,7 +9,7 @@
     ./modules/home/git
     ./modules/home/direnv
     ./modules/home/fish
-    #./modules/home/jetbrains-rider
+    ./modules/home/jetbrains-rider
   ];
 
   fonts.fontconfig.enable = true;
