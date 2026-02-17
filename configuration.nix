@@ -6,7 +6,8 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
 
@@ -22,7 +23,7 @@
   networking.hostName = "nix746"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
 
   # Set your time zone.
   time.timeZone = "Asia/Shanghai";
@@ -50,7 +51,7 @@
   # Enable KDE Plasma
   services = {
     desktopManager.plasma6.enable = true;
-    
+
     displayManager.sddm.enable = true;
     #displayManager.sddm.wayland.enbale = true;
   };
@@ -108,8 +109,8 @@
     isNormalUser = true;
     home = "/home/a746";
     shell = pkgs.fish;
-    extraGroups = [ 
-      "networkmanager" 
+    extraGroups = [
+      "networkmanager"
       "wheel"
       "docker"
     ]; # Enable ‘sudo’ for the user.
@@ -164,6 +165,8 @@
 
     ffmpeg
 
+    nixpkgs-fmt
+    nixd
     ocamlPackages.ocaml-lsp
 
     hardinfo2
