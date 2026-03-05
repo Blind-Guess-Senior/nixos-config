@@ -15,6 +15,9 @@
       core = {
         editor = "nvim";
       };
+      commit = {
+        gpgsign = true;
+      };
       gpg = {
         format = "ssh";
       };
