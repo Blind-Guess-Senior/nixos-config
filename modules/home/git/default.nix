@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, outputs, settings, ... }:
 
 {
   programs.git = {
@@ -13,6 +13,12 @@
     extraConfig = {
       core = {
         editor = "nvim";
+      };
+      gpg = {
+        format = "ssh";
+      };
+      user = {
+        signingkey = "~/.ssh/id_rsa.pub";
       };
     };
   };
