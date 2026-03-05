@@ -4,7 +4,8 @@
   programs.git = {
     enable = true;
     userName = "Blind Guess Senior";
-    userEmail = "Blind-Guess-Senior@outlook.com";
+    userEmail = "94767867+Blind-Guess-Senior@users.noreply.github.com";
+    # userEmail = "Blind-Guess-Senior@outlook.com";
 
     delta.enable = true;
 
