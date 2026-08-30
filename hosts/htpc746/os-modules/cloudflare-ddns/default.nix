@@ -10,7 +10,7 @@
 
     provider = {
       ipv4 = "none";
-      ipv6 = "cloudflare.trace";
+      ipv6 = "local";
     };
 
     updateCron = "@every 5m";

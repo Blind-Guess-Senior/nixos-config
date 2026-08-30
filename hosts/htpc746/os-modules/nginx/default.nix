@@ -62,8 +62,6 @@
     };
   };
 
-  # Using self-signed cert now.
-
   security.acme = {
     acceptTerms = true;
     defaults.email = "Blind-Guess-Senior@outlook.com";

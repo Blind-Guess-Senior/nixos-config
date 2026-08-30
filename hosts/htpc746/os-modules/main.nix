@@ -14,6 +14,7 @@
     ./kde-plasma
     ./network
     ./nginx
+    ./openssh
     ./qbee
     ./transmission
   ];

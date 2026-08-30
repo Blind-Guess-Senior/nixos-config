@@ -16,6 +16,12 @@
       443
       2222
     ];
+    allowedTCPPortRanges = [
+      {
+        from = 45600;
+        to = 45700;
+      }
+    ];
     allowedUDPPorts = [ ];
   };
 }

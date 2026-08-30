@@ -43,9 +43,6 @@
 
   networking.hostName = "htpc746"; # Define your hostname.
 
-  # Configure network connections interactively with nmcli or nmtui.
-  networking.networkmanager.enable = true;
-
   # Set your time zone.
   time.timeZone = "Asia/Shanghai";
 
@@ -157,11 +154,6 @@
     mpv
     alsa-utils
   ];
-
-  # Enable the OpenSSH daemon.
-  services.openssh = {
-    enable = true;
-  };
 
   # Copy the NixOS configuration file and link it from the resulting system
   # (/run/current-system/configuration.nix). This is useful in case you
