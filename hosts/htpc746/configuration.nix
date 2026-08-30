@@ -26,6 +26,8 @@
       "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
       "https://mirrors.ustc.edu.cn/nix-channels/store"
     ];
+
+    auto-optimise-store = true;
   };
 
   nixpkgs.config = {
@@ -91,6 +93,7 @@
 
       openssh.authorizedKeys.keys = [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN8CFbi2UyFQo+5E2UNtb8NhZV7BNw9C9/PgJLgLJea6 home-Blind-Guess-Senior@outlook.com"
+
         "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCNhDwcFKBHHkFUne2YpGVdtsYG5BS59IEDbsgzcfErqXIpc2DzWrK2xItDRwoMxDrbvRpW5mWeCq6YILGeXxZdnEWB50DM3cg9Nsyurwd+es10LhEZH/cX4W/6AfDgg3VNiupVbQXLVJD2YNHNh3dbh3CYa1cLWbX0TM8pL/3WObk2eJqKNhRX4jSo04GSYhzhfcWLHACmN4fWc3bpqDSV5r6Hv4YEmW2cLKBTm91/6IH3SGAPOgyXR/ULmcuoI+XXFqo5/ykUnUc0/P5v8CDIPv0Bc/APjhOEN/JvzEz+FtW02jjn9VyGn/5ixkDVv58Cq3DrK5+m98t3j3WBsnMl4y6Lq3SNuXY/EVXK+8XKNZfPXRLZJv4Ycn2XCLyzfOIbQDG41gz0AeZoB1t9iXp0nJJIvsXKvNIBBrV7S9rDT08dm7phoMm6EOptfqvomb0AlhqqQb8iou1L4ihSXZ89BOVDS1zCzrxARGrq2jVpv2vJYAjpkas8F7V0FS4lqqE= nix746.Blind-Guess-Senior@outlook.com
 "
       ];
