@@ -1,0 +1,12 @@
+keys:
+  - &htpc746 age1mlhd5005n5v7tqcxd2and52kpz4wuqja9t5rw0wd4xmddhlu8eqs9rr3cz
+  - &nix746
+creation_rules:
+  - path_regex: hosts/htpc746/secrets/[^/]+\.(yaml|json|env|ini)$
+    key_groups:
+      - age:
+        - *htpc746
+  - path_regex: hosts/nix746/secrets/[^/]+\.(yaml|json|env|ini)$
+    key_groups:
+      - age:
+        - *nix746
