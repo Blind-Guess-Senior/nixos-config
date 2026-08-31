@@ -4,7 +4,7 @@
     enable = true;
 
     user = "transmission";
-    group = "transmission";
+    group = "torrent";
     downloadDirPermissions = "770";
 
     home = "/mnt/data/transmission";

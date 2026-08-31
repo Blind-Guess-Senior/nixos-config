@@ -12,7 +12,7 @@
     enable = true;
     package = pkgs.qbittorrent-enhanced-nox;
     user = "qbittorrent";
-    group = "qbittorrent";
+    group = "torrent";
     profileDir = "/mnt/data/qBittorrent/";
     openFirewall = true;
     webuiPort = 8080;

@@ -14,18 +14,6 @@
     recommendedOptimisation = true;
     recommendedGzipSettings = true;
 
-    virtualHosts."192.168.1.10" = {
-      default = true;
-      # no ssl now
-      forceSSL = false;
-      enableACME = false;
-
-      locations."/qbee/" = {
-        proxyPass = "http://127.0.0.1:8080/";
-        extraConfig = "";
-      };
-    };
-
     virtualHosts = {
       "blind-guess-senior.cc" = {
         forceSSL = false;

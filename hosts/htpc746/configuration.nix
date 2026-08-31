@@ -82,7 +82,7 @@
         "networkmanager"
         "docker"
         "minecraft"
-        "transmission"
+        "torrent"
       ];
       packages = with pkgs; [
         p7zip
@@ -99,6 +99,8 @@
       ];
     };
   };
+
+  users.groups.torrent = { };
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
