@@ -33,14 +33,18 @@
           DiskIOReadMode = "DisableOSCache";
           DiskIOType = "Posix";
           DiskIOWriteMode = "DisableOSCache";
+          FinishedTorrentExportDirectory = "/mnt/data/qBittorrent/qBittorrent/torrents";
           GlobalDLSpeedLimit = 2560;
           GlobalUPSpeedLimit = 1536;
           IgnoreLimitsOnLAN = "true";
           MaxActiveDownloads = 6;
           MaxActiveTorrents = 40;
           MaxActiveUploads = 20;
+          Preallocation = "true";
           PublicTrackersList = ''http://tracker.opentrackr.org:1337/announce\n\nudp://open.demonii.com:1337/announce\n\nudp://open.stealth.si:80/announce\n\nudp://tracker.torrent.eu.org:451/announce\n\nudp://tracker1.myporn.club:9337/announce\n\nudp://tracker.theoks.net:6969/announce\n\nudp://tracker.srv00.com:6969/announce\n\nudp://tracker.qu.ax:6969/announce\n\nudp://tracker.filemail.com:6969/announce\n\nudp://tracker.bittor.pw:1337/announce\n\nudp://tracker-udp.gbitt.info:80/announce\n\nudp://run.publictracker.xyz:6969/announce\n\nudp://retracker01-msk-virt.corbina.net:80/announce\n\nudp://opentracker.io:6969/announce\n\nudp://open.dstud.io:6969/announce\n\nudp://leet-tracker.moe:1337/announce\n\nudp://explodie.org:6969/announce\n\nudp://bt.bontal.net:6969/announce\n\nudp://6ahddutb1ucc3cp.ru:6969/announce\n\nhttps://tracker.alaskantf.com:443/announce\n\n'';
           ReannounceWhenAddressChanged = "true";
+          RefreshInterval = 5000;
+          TorrentExportDirectory = "/mnt/data/qBittorrent/qBittorrent/torrents";
           UseAlternativeGlobalSpeedLimit = "true";
         };
         TrackerEnabled = "true";
