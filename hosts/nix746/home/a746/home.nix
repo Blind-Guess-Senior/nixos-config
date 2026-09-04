@@ -78,7 +78,6 @@
     obs-studio
     gimp3
     flameshot
-    go-musicfox
     netease-cloud-music-gtk
 
     ## Calibre

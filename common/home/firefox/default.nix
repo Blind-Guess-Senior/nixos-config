@@ -214,8 +214,16 @@
                       name = "Linux";
                       bookmarks = [
                         {
-                          name = "Nix";
+                          name = "Nix & NixOS";
                           bookmarks = [
+                            {
+                              name = "Nix Cookbook - Official NixOS Wiki";
+                              tags = [
+                                "NixOS"
+                              ];
+                              keyword = "cookbook";
+                              url = "https://wiki.nixos.org/wiki/Nix_Cookbook";
+                            }
                             {
                               name = "Noogle";
                               tags = [
