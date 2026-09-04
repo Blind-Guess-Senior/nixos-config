@@ -2,6 +2,8 @@
 
 {
   imports = [
+    ../../../common/os/clash-verge
+    ../../../common/os/envfs
     ../../../common/os/fcitx5
     ../../../common/os/fonts
     ../../../common/os/git

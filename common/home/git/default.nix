@@ -10,6 +10,8 @@
 {
   programs.git = {
     enable = true;
+    lfs.enable = true;
+
     settings = {
       user = {
         name = "Blind Guess Senior";
@@ -18,9 +20,25 @@
       init = {
         defaultBranch = "main";
       };
+
+      core = {
+        editor = "nvim";
+        autocrlf = "input";
+      };
+
+      alias = {
+        "pr" = "pull --rebase";
+        "unadd" = "restore --staged";
+      };
+
       safe = {
         directory = [ "/etc/nixos" ];
       };
     };
+  };
+
+  programs.delta = {
+    enable = true;
+    enableGitIntegration = true;
   };
 }
