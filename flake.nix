@@ -51,7 +51,9 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.extraSpecialArgs = arguments;
-              home-manager.backupFileExtension = "hm-backup-${toString self.lastModified}";
+              # home-manager.backupFileExtension = "hm-backup-${toString self.lastModified}";
+              home-manager.backupFileExtension = "hm-backup";
+              home-manager.backupCommand = "mv $1 $1-$(date +%s).hm-backup";
 
               home-manager.users = {
                 a746 = {
@@ -85,7 +87,8 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.extraSpecialArgs = arguments;
-              home-manager.backupFileExtension = "hm-backup-${toString self.lastModified}";
+              home-manager.backupFileExtension = "hm-backup";
+              home-manager.backupCommand = "mv $1 $1-$(date +%s).hm-backup";
 
               home-manager.users = {
                 a746 = {

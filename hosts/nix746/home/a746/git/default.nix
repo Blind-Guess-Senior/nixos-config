@@ -20,9 +20,12 @@
         # email = "Blind-Guess-Senior@outlook.com";
         signingkey = "803C629090780959";
       };
+
       core = {
         editor = "nvim";
+        autocrlf = "input";
       };
+
       commit = {
         gpgsign = true;
       };
@@ -32,8 +35,14 @@
       tag = {
         gpgSign = true;
       };
+
       init = {
         defaultBranch = "main";
+      };
+
+      alias = {
+        "pr" = "pull --rebase";
+        "unadd" = "restore --staged";
       };
 
       safe = {

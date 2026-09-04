@@ -16,6 +16,8 @@
 
       # About Remote
       ms-vscode-remote.remote-containers
+      ms-vscode-remote.remote-ssh
+      ms-vscode.remote-explorer
 
       # About Utilities
       eamodio.gitlens
@@ -24,9 +26,9 @@
       yzhang.markdown-all-in-one
       tamasfe.even-better-toml
       redhat.vscode-yaml
-      ocamllabs.ocaml-platform
+      # ocamllabs.ocaml-platform
       jnoortheen.nix-ide
-      ms-vscode.cpptools
+      # ms-vscode.cpptools
 
       # About Others
       yltx.vscode-luogu
