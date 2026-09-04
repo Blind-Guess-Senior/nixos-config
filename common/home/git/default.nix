@@ -29,6 +29,7 @@
       alias = {
         "pr" = "pull --rebase";
         "unadd" = "restore --staged";
+        "lo" = "log --oneline";
       };
 
       safe = {
