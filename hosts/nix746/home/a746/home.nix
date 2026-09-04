@@ -15,69 +15,77 @@
   ];
 
   home.packages = with pkgs; [
-    pandoc
-    thunderbird
-    bitwarden-desktop
-
-    obsidian
-    chromium
-    microsoft-edge
-    firefox
-    # moonlight-qt
-    libreoffice
-
-    # Build Tools
+    # Develop
+    ## Runtime & Build Tools
+    ### C & C++
     gnumake
     cmake
     ninja
 
+    ### Javascript
     nodejs
 
-    # KDE
-    kdePackages.yakuake
+    ### Emulator
+    # waydroid
+    # waydroid-helper
 
-    remmina
+    ## JetBrains
+    # jetbrains.clion
+    # jetbrains.pycharm
 
-    # Deemos
-    stripe-cli
+    ## Unity
+    unityhub
 
-    # JetBrains
-    jetbrains.clion
-    jetbrains.pycharm
-
-    # AI Agents
+    ## AI Agents
     cc-switch
     # claude-code
     codex
 
+    # Graphic
+    ## KDE
+    kdePackages.yakuake
+
+    # Office
+    thunderbird
+    bitwarden-desktop
+    libreoffice
     #aseprite
 
-    waydroid
-    waydroid-helper
-
-    # Chat & Connection
+    ## Chat & Connection
     feishu
     #discord
     qq
     #wechat-uos
 
-    #steamcmd
+    ## Document Processing
+    pandoc
+    obsidian
 
-    # Calibre
-    calibre
-    calibre-web
+    # Browser
+    chromium
+    # microsoft-edge
+
+    # Network
+    ## Utilitis
+    remmina
+    moonlight-qt
+
+    # Deemos
+    stripe-cli
 
     # Multimedia
     mpv
     obs-studio
     gimp3
     flameshot
+    go-musicfox
+    netease-cloud-music-gtk
 
-    # Network Proxy
-    clash-verge-rev
+    ## Calibre
+    calibre
 
-    # Unity
-    unityhub
+    # Games
+    #steamcmd
   ];
 
   home.stateVersion = "26.05";

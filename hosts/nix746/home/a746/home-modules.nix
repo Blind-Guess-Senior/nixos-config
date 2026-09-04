@@ -3,6 +3,7 @@
 {
   imports = [
     ../../../../common/home/direnv
+    ../../../../common/home/firefox
     ../../../../common/home/fish
     ../../../../common/home/nvim
 
