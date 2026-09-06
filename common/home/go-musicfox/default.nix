@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 let
-  toml = pkgs.formats.toml {};
+  toml = pkgs.formats.toml { };
 in
 {
   home.packages = [
