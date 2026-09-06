@@ -12,6 +12,12 @@
   ];
 
   home.packages = with pkgs; [
+    # Utilities
+    tmux
+    yazi
+    rar
+    p7zip
+
     # Develop
     ## Runtime & Build Tools
     ### C & C++

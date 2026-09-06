@@ -91,7 +91,6 @@
         "docker"
       ];
       packages = with pkgs; [
-        p7zip
         libgcc
         libclang
         gcc

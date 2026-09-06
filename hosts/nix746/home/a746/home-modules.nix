@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
   imports = [
@@ -6,6 +6,7 @@
     ../../../../common/home/firefox
     ../../../../common/home/fish
     ../../../../common/home/go-musicfox
+    ../../../../common/home/lutris
     ../../../../common/home/nvim
 
     ./git
