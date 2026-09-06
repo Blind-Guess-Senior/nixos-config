@@ -3,7 +3,18 @@
   pkgs,
   ...
 }:
+let
+  firefox-bookmarks-sync = pkgs.writeShellApplication {
+    name = "firefox-bookmarks-sync";
+    runtimeInputs = [ pkgs.python3 ];
+    text = ''
+      exec python3 ${./sync-bookmarks.py} "$@"
+    '';
+  };
+in
 {
+  home.packages = [ firefox-bookmarks-sync ];
+
   programs.firefox = {
     enable = true;
 
@@ -192,71 +203,7 @@
 
         bookmarks = {
           force = true;
-          settings = [
-            {
-              name = "Nix-Managed Bookmarks";
-              toolbar = true;
-              bookmarks = [
-                {
-                  name = "坛 博";
-                  bookmarks = [
-                    {
-                      name = "论坛";
-                      bookmarks = [ ];
-                    }
-
-                  ];
-                }
-                {
-                  name = "Computer";
-                  bookmarks = [
-                    {
-                      name = "Linux";
-                      bookmarks = [
-                        {
-                          name = "Nix & NixOS";
-                          bookmarks = [
-                            {
-                              name = "Nix Cookbook - Official NixOS Wiki";
-                              tags = [
-                                "NixOS"
-                              ];
-                              keyword = "cookbook";
-                              url = "https://wiki.nixos.org/wiki/Nix_Cookbook";
-                            }
-                            {
-                              name = "Noogle";
-                              tags = [
-                                "NixOS"
-                                "Utils"
-                              ];
-                              keyword = "noogle";
-                              url = "https://noogle.dev";
-                            }
-                          ];
-                        }
-                      ];
-                    }
-                  ];
-                }
-                "separator"
-                {
-                  name = "其他";
-                  bookmarks = [
-                    {
-                      name = "Terraria 中文 Wiki";
-                      tags = [
-                        "wiki"
-                        "game"
-                      ];
-                      keyword = "terriaria";
-                      url = "https://terraria.wiki.gg/zh/wiki/Terraria_Wiki";
-                    }
-                  ];
-                }
-              ];
-            }
-          ];
+          settings = builtins.fromJSON (builtins.readFile ./bookmarks.json);
         };
       };
     };

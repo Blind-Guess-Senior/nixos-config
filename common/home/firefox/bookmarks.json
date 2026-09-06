@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Bookmarks Toolbar",
+    "toolbar": true,
+    "bookmarks": [
+      {
+        "name": "坛 博",
+        "bookmarks": [
+          {
+            "name": "论坛",
+            "bookmarks": []
+          }
+        ]
+      },
+      {
+        "name": "Computer",
+        "bookmarks": [
+          {
+            "name": "Linux",
+            "bookmarks": [
+              {
+                "name": "Nix & NixOS",
+                "bookmarks": [
+                  {
+                    "name": "Ref",
+                    "bookmarks": [
+                      {
+                        "name": "Preface - Home Manager Manual",
+                        "tags": [
+                          "Manual",
+                          "NixOS"
+                        ],
+                        "url": "https://home-manager.dev/manual/unstable/index.html"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Nix Cookbook - Official NixOS Wiki",
+                    "tags": [
+                      "NixOS"
+                    ],
+                    "keyword": "cookbook",
+                    "url": "https://wiki.nixos.org/wiki/Nix_Cookbook"
+                  },
+                  {
+                    "name": "Noogle",
+                    "tags": [
+                      "NixOS",
+                      "Utils"
+                    ],
+                    "keyword": "noogle",
+                    "url": "https://noogle.dev/"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "separator",
+      {
+        "name": "其他",
+        "bookmarks": [
+          {
+            "name": "Terraria 中文 Wiki",
+            "tags": [
+              "game",
+              "wiki"
+            ],
+            "keyword": "terriaria",
+            "url": "https://terraria.wiki.gg/zh/wiki/Terraria_Wiki"
+          }
+        ]
+      }
+    ]
+  }
+]
