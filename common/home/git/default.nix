@@ -1,9 +1,5 @@
 {
-  config,
-  pkgs,
   lib,
-  inputs,
-  outputs,
   ...
 }:
 
@@ -12,7 +8,7 @@
     enable = true;
     lfs.enable = true;
 
-    settings = {
+    settings = lib.mapAttrsRecursive (_path: value: lib.mkDefault value) {
       user = {
         name = "Blind Guess Senior";
         email = "Blind-Guess-Senior@outlook.com";
@@ -30,6 +26,8 @@
         "pr" = "pull --rebase";
         "unadd" = "restore --staged";
         "lo" = "log --oneline";
+        "commit-a" = "commit --amend";
+        "commit-an" = "commit --amend --no-edit";
       };
 
       safe = {
