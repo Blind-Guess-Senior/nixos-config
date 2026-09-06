@@ -19,13 +19,21 @@
     experimental-features = [
       "nix-command"
       "flakes"
+      "configurable-impure-env"
     ];
 
     # Nix channels mirror.
-    substituters = [
+    extra-substituters = [
+      "https://nix-community.cachix.org"
       "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
       "https://mirrors.ustc.edu.cn/nix-channels/store"
     ];
+    extra-trusted-public-keys = [
+      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+    ];
+
+    # GOPROXY for root. e.g. sudo nixos-rebuild switch
+    impure-env = [ "GOPROXY=https://goproxy.cn,direct" ];
 
     auto-optimise-store = true;
   };
@@ -33,8 +41,10 @@
   nixpkgs.config = {
     # Allow unfree software.
     allowUnfree = true;
-    go-modules.proxy = "https://goproxy.cn,direct";
   };
+
+  # GOPROXY for trusted user. e.g. nix shell
+  systemd.services.nix-daemon.environment.GOPROXY = "https://goproxy.cn,direct";
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -87,6 +97,7 @@
       packages = with pkgs; [
         p7zip
         gcc
+        rar
       ];
 
       linger = true;
@@ -94,8 +105,39 @@
       openssh.authorizedKeys.keys = [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN8CFbi2UyFQo+5E2UNtb8NhZV7BNw9C9/PgJLgLJea6 home-Blind-Guess-Senior@outlook.com"
 
-        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCNhDwcFKBHHkFUne2YpGVdtsYG5BS59IEDbsgzcfErqXIpc2DzWrK2xItDRwoMxDrbvRpW5mWeCq6YILGeXxZdnEWB50DM3cg9Nsyurwd+es10LhEZH/cX4W/6AfDgg3VNiupVbQXLVJD2YNHNh3dbh3CYa1cLWbX0TM8pL/3WObk2eJqKNhRX4jSo04GSYhzhfcWLHACmN4fWc3bpqDSV5r6Hv4YEmW2cLKBTm91/6IH3SGAPOgyXR/ULmcuoI+XXFqo5/ykUnUc0/P5v8CDIPv0Bc/APjhOEN/JvzEz+FtW02jjn9VyGn/5ixkDVv58Cq3DrK5+m98t3j3WBsnMl4y6Lq3SNuXY/EVXK+8XKNZfPXRLZJv4Ycn2XCLyzfOIbQDG41gz0AeZoB1t9iXp0nJJIvsXKvNIBBrV7S9rDT08dm7phoMm6EOptfqvomb0AlhqqQb8iou1L4ihSXZ89BOVDS1zCzrxARGrq2jVpv2vJYAjpkas8F7V0FS4lqqE= nix746.Blind-Guess-Senior@outlook.com
-"
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCNhDwcFKBHHkFUne2YpGVdtsYG5BS59IEDbsgzcfErqXIpc2DzWrK2xItDRwoMxDrbvRpW5mWeCq6YILGeXxZdnEWB50DM3cg9Nsyurwd+es10LhEZH/cX4W/6AfDgg3VNiupVbQXLVJD2YNHNh3dbh3CYa1cLWbX0TM8pL/3WObk2eJqKNhRX4jSo04GSYhzhfcWLHACmN4fWc3bpqDSV5r6Hv4YEmW2cLKBTm91/6IH3SGAPOgyXR/ULmcuoI+XXFqo5/ykUnUc0/P5v8CDIPv0Bc/APjhOEN/JvzEz+FtW02jjn9VyGn/5ixkDVv58Cq3DrK5+m98t3j3WBsnMl4y6Lq3SNuXY/EVXK+8XKNZfPXRLZJv4Ycn2XCLyzfOIbQDG41gz0AeZoB1t9iXp0nJJIvsXKvNIBBrV7S9rDT08dm7phoMm6EOptfqvomb0AlhqqQb8iou1L4ihSXZ89BOVDS1zCzrxARGrq2jVpv2vJYAjpkas8F7V0FS4lqqE= nix746.Blind-Guess-Senior@outlook.com"
+      ];
+    };
+
+    Pale = {
+      isNormalUser = true;
+      home = "/home/Pale";
+      shell = pkgs.bashInteractive;
+      extraGroups = [
+        "wheel"
+        "docker"
+        "torrent"
+      ];
+      packages = with pkgs; [ ];
+
+      openssh.authorizedKeys.keys = [
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDt2+/loNXw71+pPbeOTn0ItYaBZl5jwwr6sqw53iDYuE+hgY38rS7JGcreDsj4GdZW1soCVboUHNcbAC4RBz/kRIcU5jEWfeck80wuXYJkFBa8ktOW46nnyT80i/tqKh2ZhmaT0kGfX9ty7xL/obcDghY7WhIgEdhE+T92bK2t4dMSZO5H4z7foemp/FV8U5mCarCIyVECFwv6gdDjPYmb6h8poxCYPPR0tQv3+jVCsVXCiTZ+9oh0ehf6E/m6a73qqbagdGdSemyMLPOsqHDUwoMsgvdm8phB/VvCmXhtEnUWb6gtfeU7u4f+LaOwXHP+NrwuiAi6EdFYfAM/y6UNeMmf1molqvVuLXYD3J33udFolz2oiCsn394/bIHRwdfl5GpyHbV7RCEHAz2zstg2D/gnei4IY3Wj4q33XtmKbYB2Ob/Kk9gb5P32BYPR8/HoL1jEuBHfFGpTEv8kY7LLNng39goMn3yezrPF85tbxsogzqncsEXiT50US1VqKLk= pale_knight_yq@163.com"
+      ];
+    };
+
+    eastcloud = {
+      isNormalUser = true;
+      home = "/home/eastcloud";
+      shell = pkgs.bashInteractive;
+      extraGroups = [
+        "wheel"
+        "docker"
+        "torrent"
+      ];
+      packages = with pkgs; [ ];
+
+      openssh.authorizedKeys.keys = [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF+dzg9Ut0Kfnxhj4YE9BPJ55dMjxF3fK789fhZER+p9 macbook"
       ];
     };
   };

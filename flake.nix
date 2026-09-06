@@ -61,6 +61,12 @@
                     ./hosts/${settings.htpcHostName}/home/a746/home.nix
                   ];
                 };
+
+                Pale = {
+                  imports = [
+                    ./hosts/${settings.htpcHostName}/home/Pale/home.nix
+                  ];
+                };
               };
             }
 
