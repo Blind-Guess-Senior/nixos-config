@@ -24,6 +24,7 @@
 
       # About Language
       yzhang.markdown-all-in-one
+      james-yu.latex-workshop
       tamasfe.even-better-toml
       redhat.vscode-yaml
       # ocamllabs.ocaml-platform

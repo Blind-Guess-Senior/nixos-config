@@ -19,13 +19,21 @@
     experimental-features = [
       "nix-command"
       "flakes"
+      "configurable-impure-env"
     ];
 
     # Nix channels mirror.
-    substituters = [
+    extra-substituters = [
+      "https://nix-community.cachix.org"
       "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
       "https://mirrors.ustc.edu.cn/nix-channels/store"
     ];
+    extra-trusted-public-keys = [
+      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+    ];
+
+    # GOPROXY for root. e.g. sudo nixos-rebuild switch
+    impure-env = [ "GOPROXY=https://goproxy.cn,direct" ];
   };
 
   # Allow unfree
@@ -33,6 +41,9 @@
     allowUnfree = true;
     allowInsecurePredicate = _: true;
   };
+
+  # GOPROXY for trusted user. e.g. nix shell
+  systemd.services.nix-daemon.environment.GOPROXY = "https://goproxy.cn,direct";
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;

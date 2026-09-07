@@ -28,6 +28,9 @@
     ### Javascript
     nodejs
 
+    ## LaTeX
+    texliveFull
+
     ### Emulator
     # waydroid
     # waydroid-helper
@@ -72,6 +75,9 @@
     ## Utilitis
     remmina
     moonlight-qt
+
+    ## Cloudflare
+    cloudflared
 
     # Deemos
     stripe-cli
