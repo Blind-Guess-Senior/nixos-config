@@ -55,6 +55,10 @@
             ./hosts/${settings.htpcHostName}/configuration.nix
             ./hosts/${settings.htpcHostName}/os-modules/main.nix
 
+            {
+              nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+            }
+
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
@@ -90,6 +94,10 @@
           modules = [
             ./hosts/${settings.laptopHostName}/configuration.nix
             ./hosts/${settings.laptopHostName}/os-modules/main.nix
+
+            {
+              nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+            }
 
             {
               nixpkgs.overlays = [

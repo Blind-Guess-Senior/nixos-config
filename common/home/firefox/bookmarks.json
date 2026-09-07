@@ -50,10 +50,32 @@
                     ],
                     "keyword": "noogle",
                     "url": "https://noogle.dev/"
+                  },
+                  {
+                    "name": "NixOS & Flakes Book | 主页",
+                    "tags": [
+                      "NixOS",
+                      "Tutorial"
+                    ],
+                    "url": "https://nixos-and-flakes.thiscute.world/zh/"
                   }
                 ]
               }
             ]
+          },
+          {
+            "name": "Synchronizing Thunderbird across 3 computers | Thunderbird Support Forum | Mozilla Support",
+            "tags": [
+              "Tutorial"
+            ],
+            "url": "https://support.mozilla.org/en-US/questions/1479820"
+          },
+          {
+            "name": "gnupg - How to manage GPG keys across multiple systems? - Super User",
+            "tags": [
+              "Answer"
+            ],
+            "url": "https://superuser.com/questions/466396/how-to-manage-gpg-keys-across-multiple-systems"
           }
         ]
       },

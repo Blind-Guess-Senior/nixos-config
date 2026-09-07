@@ -183,6 +183,30 @@ in
               ];
             };
 
+            noogle = {
+              name = "Noogle";
+              urls = [
+                {
+                  template = "https://noogle.dev/q/";
+                  params = [
+                    {
+                      name = "type";
+                      value = "q";
+                    }
+                    {
+                      name = "term";
+                      value = "{searchTerms}";
+                    }
+                  ];
+                }
+              ];
+
+              icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+              definedAliases = [
+                "noogle"
+              ];
+            };
+
             nixos-wiki = {
               name = "NixOS Wiki";
               urls = [ { template = "https://wiki.nixos.org/w/index.php?search={searchTerms}"; } ];
