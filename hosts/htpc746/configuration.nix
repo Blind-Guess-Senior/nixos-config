@@ -93,6 +93,7 @@
         "docker"
         "minecraft"
         "torrent"
+        "media"
       ];
       packages = with pkgs; [
         p7zip
@@ -117,6 +118,7 @@
         "wheel"
         "docker"
         "torrent"
+        "media"
       ];
       packages = with pkgs; [ ];
 
@@ -133,6 +135,7 @@
         "wheel"
         "docker"
         "torrent"
+        "media"
       ];
       packages = with pkgs; [ ];
 
@@ -142,7 +145,10 @@
     };
   };
 
-  users.groups.torrent = { };
+  users.groups = {
+    torrent = { };
+    media = { };
+  };
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
