@@ -8,11 +8,11 @@
     ../../../common/os/fonts
     ../../../common/os/git
     ../../../common/os/gnupg
+    ../../../common/os/kde-plasma
     ../../../common/os/nix-ld
     ../../../common/os/sops-nix
 
     ./bluetooth
-    ./kde-plasma
     ./postgresql
   ];
 

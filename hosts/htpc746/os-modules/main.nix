@@ -5,6 +5,7 @@
     ../../../common/os/calibre-web
     ../../../common/os/fonts
     ../../../common/os/git
+    ../../../common/os/kde-plasma
     ../../../common/os/nix-ld
     ../../../common/os/pipewire
     ../../../common/os/sops-nix

@@ -34,13 +34,22 @@
     let
       inherit (self) outputs;
       settings = import ./settings.nix;
+      hostinfoes = import ./hostinfo.nix;
+
       arguments = { inherit inputs outputs settings; };
+
+      argumentsWithHostinfo =
+        host:
+        arguments
+        // {
+          hostinfo = hostinfoes.${host};
+        };
     in
     {
       nixosConfigurations = {
         "${settings.htpcHostName}" = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
-          specialArgs = arguments;
+          specialArgs = argumentsWithHostinfo settings.htpcHostName;
 
           modules = [
             ./hosts/${settings.htpcHostName}/configuration.nix
@@ -76,7 +85,7 @@
 
         "${settings.laptopHostName}" = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
-          specialArgs = arguments;
+          specialArgs = argumentsWithHostinfo settings.laptopHostName;
 
           modules = [
             ./hosts/${settings.laptopHostName}/configuration.nix
