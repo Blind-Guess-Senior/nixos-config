@@ -24,6 +24,6 @@
 
     monaspace
   ];
-  
+
   fonts.enableDefaultPackages = false;
 }

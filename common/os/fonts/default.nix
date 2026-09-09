@@ -14,7 +14,7 @@
 
     monaspace
   ];
-  
+
   fonts.enableDefaultPackages = lib.mkDefault true;
 
   fonts.fontconfig.enable = true;
