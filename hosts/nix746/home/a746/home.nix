@@ -94,6 +94,7 @@
 
     # Games
     #steamcmd
+    osu-lazer-bin
   ];
 
   home.stateVersion = "26.05";

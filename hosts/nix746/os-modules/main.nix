@@ -13,6 +13,7 @@
     ../../../common/os/sops-nix
 
     ./bluetooth
+    ./fonts
     ./postgresql
   ];
 
