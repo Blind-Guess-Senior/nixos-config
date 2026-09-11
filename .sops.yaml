@@ -1,12 +1,24 @@
 keys:
-  - &htpc746 age1mlhd5005n5v7tqcxd2and52kpz4wuqja9t5rw0wd4xmddhlu8eqs9rr3cz
-  - &nix746
+  - &host_htpc746 age1mlhd5005n5v7tqcxd2and52kpz4wuqja9t5rw0wd4xmddhlu8eqs9rr3cz
+  - &host_nix746 age1___temp
+  - &user_a746 age1t68f0ctesfpeh8ugfsaeesq6m83z9js9pl907vx9rgtx8t6yl3mskafn7w
 creation_rules:
-  - path_regex: hosts/htpc746/secrets/[^/]+\.(yaml|json|env|ini)$
+  # htpc746
+  - path_regex: hosts/htpc746/secrets/host/[^/]+\.(yaml|yml|toml|json|env|ini)$
     key_groups:
       - age:
-        - *htpc746
-  - path_regex: hosts/nix746/secrets/[^/]+\.(yaml|json|env|ini)$
+          - *host_htpc746
+  - path_regex: hosts/htpc746/secrets/users/a746/[^/]+\.(yaml|yml|toml|json|env|ini)$
     key_groups:
       - age:
-        - *nix746
+          - *user_a746
+
+  # nix746
+  - path_regex: hosts/nix746/secrets/host/[^/]+\.(yaml|yml|toml|json|env|ini)$
+    key_groups:
+      - age:
+          - *host_nix746
+  - path_regex: hosts/nix746/secrets/users/a746/[^/]+\.(yaml|yml|toml|json|env|ini)$
+    key_groups:
+      - age:
+          - *user_a746

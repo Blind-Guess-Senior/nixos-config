@@ -13,6 +13,7 @@
     ./git
     ./jetbrains-rider
     ./jetbrains-webstorm
+    ./sops-nix
     ./vscode
   ];
 }

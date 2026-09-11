@@ -17,9 +17,13 @@
     };
 
     # nix-minecraft.url = "github:Infinidoge/nix-minecraft";
-
     nix-jetbrains-plugins.url = "github:nix-community/nix-jetbrains-plugins";
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
+
+    nix-packages-dev = {
+      url = "path:/home/a746/Repos/nix-packages";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -29,6 +33,7 @@
       home-manager,
       sops-nix,
       nix-vscode-extensions,
+      nix-packages-dev,
       ...
     }:
     let
@@ -102,6 +107,7 @@
             {
               nixpkgs.overlays = [
                 nix-vscode-extensions.overlays.default
+                nix-packages-dev.overlays.default
               ];
             }
 
@@ -112,6 +118,11 @@
               home-manager.extraSpecialArgs = arguments;
               home-manager.backupFileExtension = "hm-backup";
               home-manager.backupCommand = "mv $1 $1-$(date +%s).hm-backup";
+
+              home-manager.sharedModules = [
+                sops-nix.homeModules.default
+                nix-packages-dev.homeModules.default
+              ];
 
               home-manager.users = {
                 a746 = {

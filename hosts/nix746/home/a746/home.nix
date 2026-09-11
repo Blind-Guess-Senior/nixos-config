@@ -9,6 +9,7 @@
 
   imports = [
     ./home-modules.nix
+    ./home-dev.nix
   ];
 
   home.packages = with pkgs; [
@@ -17,6 +18,7 @@
     yazi
     rar
     p7zip
+    sops
 
     # Develop
     ## Runtime & Build Tools
@@ -87,7 +89,6 @@
     obs-studio
     gimp3
     flameshot
-    netease-cloud-music-gtk
 
     ## Calibre
     calibre
