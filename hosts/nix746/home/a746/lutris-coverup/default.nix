@@ -8,7 +8,7 @@
 
   sops.secrets = {
     "lutris-coverup" = {
-      sopsFile = ../../secrets/users/a746/lutris-coverup.yaml;
+      sopsFile = ../../../secrets/users/a746/lutris-coverup.yaml;
     };
   };
 }

@@ -20,8 +20,8 @@
     nix-jetbrains-plugins.url = "github:nix-community/nix-jetbrains-plugins";
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 
-    nix-packages-dev = {
-      url = "path:/home/a746/Repos/nix-packages";
+    blind-guess-senior-nix-packages = {
+      url = "github:Blind-Guess-Senior/nix-packages";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -33,7 +33,7 @@
       home-manager,
       sops-nix,
       nix-vscode-extensions,
-      nix-packages-dev,
+      blind-guess-senior-nix-packages,
       ...
     }:
     let
@@ -107,7 +107,7 @@
             {
               nixpkgs.overlays = [
                 nix-vscode-extensions.overlays.default
-                nix-packages-dev.overlays.default
+                blind-guess-senior-nix-packages.overlays.full
               ];
             }
 
@@ -121,7 +121,7 @@
 
               home-manager.sharedModules = [
                 sops-nix.homeModules.default
-                nix-packages-dev.homeModules.default
+                blind-guess-senior-nix-packages.homeModules.full
               ];
 
               home-manager.users = {

@@ -13,6 +13,7 @@
     ./git
     ./jetbrains-rider
     ./jetbrains-webstorm
+    ./lutris-coverup
     ./sops-nix
     ./vscode
   ];
