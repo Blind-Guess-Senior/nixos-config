@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ../../../../common/home/deepseek-harness
     ../../../../common/home/direnv
     ../../../../common/home/firefox
     ../../../../common/home/fish

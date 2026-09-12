@@ -13,6 +13,9 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+
+    # Include top-level secrets definitions.
+    ./top-level-secrets.nix
   ];
 
   nix.settings = {
@@ -30,9 +33,11 @@
     ];
     extra-substituters = [
       "https://nix-community.cachix.org"
+      "https://deepseek-harness-nix.cachix.org"
     ];
     extra-trusted-public-keys = [
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+      "deepseek-harness-nix.cachix.org-1:5NrkwLN9veNMhiINtU5ZeV4isXFhFsOwn6Ms7J1M+TA="
     ];
 
     # GOPROXY for root. e.g. sudo nixos-rebuild switch
@@ -44,6 +49,10 @@
     allowUnfree = true;
     allowInsecurePredicate = _: true;
   };
+
+  nix.extraOptions = ''
+    !include ${config.sops.secrets."nix_access_tokens_github".path}
+  '';
 
   # GOPROXY for trusted user. e.g. nix shell
   systemd.services.nix-daemon.environment.GOPROXY = "https://goproxy.cn,direct";

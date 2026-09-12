@@ -1,6 +1,6 @@
 keys:
   - &host_htpc746 age1mlhd5005n5v7tqcxd2and52kpz4wuqja9t5rw0wd4xmddhlu8eqs9rr3cz
-  - &host_nix746 age1___temp
+  - &host_nix746 age1p7452uwlpvd2fyu4muy5dezlj2hrnawcet00ehu7qake6f3nt3yqcrv4x4
   - &user_a746 age1t68f0ctesfpeh8ugfsaeesq6m83z9js9pl907vx9rgtx8t6yl3mskafn7w
 creation_rules:
   # htpc746

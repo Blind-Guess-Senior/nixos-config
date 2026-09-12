@@ -20,6 +20,8 @@
     nix-jetbrains-plugins.url = "github:nix-community/nix-jetbrains-plugins";
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 
+    deepseek-harness.url = "github:moraxyc/deepseek-harness.nix";
+
     blind-guess-senior-nix-packages = {
       url = "github:Blind-Guess-Senior/nix-packages";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -107,6 +109,9 @@
             {
               nixpkgs.overlays = [
                 nix-vscode-extensions.overlays.default
+
+                inputs.deepseek-harness.overlays.default
+
                 blind-guess-senior-nix-packages.overlays.full
               ];
             }
