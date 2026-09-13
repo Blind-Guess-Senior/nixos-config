@@ -116,6 +116,10 @@
               ];
             }
 
+            blind-guess-senior-nix-packages.nixosModuleSets.full
+
+            sops-nix.nixosModules.sops
+
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
@@ -126,7 +130,7 @@
 
               home-manager.sharedModules = [
                 sops-nix.homeModules.default
-                blind-guess-senior-nix-packages.homeModules.full
+                blind-guess-senior-nix-packages.homeModuleSets.full
               ];
 
               home-manager.users = {
@@ -137,8 +141,6 @@
                 };
               };
             }
-
-            sops-nix.nixosModules.sops
           ];
         };
       };

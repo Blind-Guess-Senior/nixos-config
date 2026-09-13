@@ -15,6 +15,8 @@
     ./bluetooth
     ./fonts
     ./postgresql
+
+    ./os-dev.nix
   ];
 
   # Enable nix-ld
