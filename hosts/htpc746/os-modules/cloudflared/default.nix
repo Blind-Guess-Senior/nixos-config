@@ -20,7 +20,7 @@
 
   sops.secrets = {
     "cloudflared" = {
-      sopsFile = ../../secrets/cloudflared.yaml;
+      sopsFile = ../../secrets/host/cloudflared.yaml;
     };
   };
 
