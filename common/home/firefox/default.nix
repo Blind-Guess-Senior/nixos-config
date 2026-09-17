@@ -45,7 +45,7 @@ in
       SearchBar = "unified"; # alternative: "separate"
 
       ExtensionSettings = {
-        "*".installation_mode = "blocked"; # blocks all addons except the ones specified below
+        "*".installation_mode = "allowed"; # blocks all addons except the ones specified below
         # uBlock Origin:
         "uBlock0@raymondhill.net" = {
           installation_mode = "force_installed";
@@ -61,6 +61,16 @@ in
           installation_mode = "force_installed";
           private_browsing = true;
         };
+        # Copy Page Title
+        "copy-page-title@yourdomain.com" = {
+          installation_mode = "force_installed";
+          private_browsing = true;
+        };
+        # ReadFrog
+        "{bd311a81-4530-4fcc-9178-74006155461b}" = {
+          installation_mode = "force_installed";
+          private_browsing = true;
+        };
       };
     };
 
@@ -73,20 +83,14 @@ in
           "app.normandy.first_run" = true;
           "browser.aboutwelcome.enabled" = true;
 
-          "browser.ai.control.sidebarChatbot" = {
-            Value = "blocked";
-            Status = "locked";
-          };
+          "browser.ai.control.sidebarChatbot" = "blocked";
 
           "browser.bookmarks.addedImportButton" = false;
 
           "browser.download.alwaysOpenPanel" = true;
           "browser.download.autohideButton" = false;
 
-          "browser.link.open_newwindow" = {
-            Value = 3;
-            Status = "locked";
-          };
+          "browser.link.open_newwindow" = 3;
 
           "browser.ml.chat.enabled" = false;
           "browser.ml.chat.page" = false;
@@ -111,10 +115,7 @@ in
           "sidebar.verticalTabs" = true;
           "sidebar.verticalTabs.dragToPinPromo.dismissed" = true;
 
-          "signon.firefoxRelay.feature" = {
-            Value = "disabled";
-            Status = "locked";
-          };
+          "signon.firefoxRelay.feature" = "disabled";
           "signon.management.page.breach-alerts.enabled" = false;
         };
 

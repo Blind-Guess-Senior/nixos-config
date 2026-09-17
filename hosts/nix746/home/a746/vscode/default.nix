@@ -30,6 +30,7 @@
       # ocamllabs.ocaml-platform
       jnoortheen.nix-ide
       # ms-vscode.cpptools
+      rust-lang.rust-analyzer
 
       # About Others
       yltx.vscode-luogu

@@ -139,28 +139,30 @@
     # Network Utils
     wget
     nfs-utils
-    # Network Hardware
+    ndisc6
+    tcpdump
+    ## Network Hardware Utils
     iw
 
     # File Utils
-    # View
+    ## View
     tree
     ripgrep
     lsof
-    # Compress
+    ## Compress
     libarchive
     zip
     unzip
-    # Format
+    ## Format
     nixfmt
     treefmt
-    # File System
+    ## File System
     parted
 
     # Development
-    # VCS
+    ## VCS
     git
-    # C & C++
+    ## C & C++
     libgcc
     libclang
     libcxx
@@ -168,9 +170,9 @@
     gnumake
     cmake
     ninja
-    # Nix
+    ## Nix
     nixd
-    # OCaml
+    ## OCaml
     ocamlPackages.ocaml-lsp
 
     # Shell
@@ -178,11 +180,11 @@
     fish
 
     # Hardware
-    # Monitor
+    ## Monitor
     fastfetch
     btop
     radeontop
-    # Info
+    ## Info
     hardinfo2
     pciutils
 
@@ -191,12 +193,12 @@
     mpv
     alsa-utils
 
-    # KDE
+    # GUI
+    ## KDE
     kdePackages.kcalc
     kdePackages.sddm-kcm
     kdePackages.kate
-
-    # Wayland
+    ## Wayland
     wayland-utils
     wl-clipboard
   ];

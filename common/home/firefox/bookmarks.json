@@ -64,6 +64,18 @@
             ]
           },
           {
+            "name": "Solutions",
+            "bookmarks": [
+              {
+                "name": "\"Connecting with SSH timed out\" when Fish/tcsh/csh shell is used · Issue #2509 · microsoft/vscode-remote-release",
+                "tags": [
+                  "Answer"
+                ],
+                "url": "https://github.com/microsoft/vscode-remote-release/issues/2509"
+              }
+            ]
+          },
+          {
             "name": "Synchronizing Thunderbird across 3 computers | Thunderbird Support Forum | Mozilla Support",
             "tags": [
               "Tutorial"
