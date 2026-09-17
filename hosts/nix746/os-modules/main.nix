@@ -13,7 +13,9 @@
     ../../../common/os/sops-nix
 
     ./bluetooth
+    ./cloudflare-ddns
     ./fonts
+    ./network
     ./postgresql
 
     ./os-dev.nix
