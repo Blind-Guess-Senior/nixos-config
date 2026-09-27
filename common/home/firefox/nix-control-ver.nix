@@ -33,8 +33,8 @@ in
 
       DontCheckDefaultBrowser = true;
 
-      # DisableAccounts = true;
-      # DisableFirefoxAccounts = true;
+      DisableAccounts = true;
+      DisableFirefoxAccounts = true;
       DisableFirefoxScreenshots = true;
 
       DisplayBookmarksToolbar = "always"; # alternatives: "always", "never" or "newtab"
@@ -228,10 +228,10 @@ in
           ];
         };
 
-        # bookmarks = {
-        #   force = true;
-        #   settings = builtins.fromJSON (builtins.readFile ./bookmarks.json);
-        # };
+        bookmarks = {
+          force = true;
+          settings = builtins.fromJSON (builtins.readFile ./bookmarks.json);
+        };
       };
     };
   };

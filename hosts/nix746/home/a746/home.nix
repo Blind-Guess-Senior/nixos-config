@@ -66,6 +66,7 @@
     #discord
     qq
     #wechat-uos
+    wemeet
 
     ## Document Processing
     pandoc
@@ -94,6 +95,9 @@
 
     ## Calibre
     calibre
+
+    ## BT
+    transmission_4-qt
 
     # Games
     #steamcmd
