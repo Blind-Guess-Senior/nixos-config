@@ -139,6 +139,7 @@
     ndisc6
     tcpdump
     ethtool
+    dig
     ## Network Hardware Utils
     iw
 

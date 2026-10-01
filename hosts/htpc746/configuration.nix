@@ -165,6 +165,10 @@
     # Network Utils
     wget
     nfs-utils
+    ndisc6
+    tcpdump
+    ethtool
+    dig
     # Network Hardware
     iw
 
