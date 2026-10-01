@@ -75,6 +75,10 @@
               home-manager.backupFileExtension = "hm-backup";
               home-manager.backupCommand = "mv $1 $1-$(date +%s).hm-backup";
 
+              home-manager.sharedModules = [
+                sops-nix.homeModules.default
+              ];
+
               home-manager.users = {
                 a746 = {
                   imports = [
