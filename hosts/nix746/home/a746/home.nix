@@ -15,27 +15,11 @@
   ];
 
   home.packages = with pkgs; [
-    # Utilities
-    tmux
-    yazi
-    rar
-    p7zip
-    sops
-
     # Develop
-    ## Runtime & Build Tools
-    ### C & C++
-    gnumake
-    cmake
-    ninja
-
-    ### Javascript
-    nodejs
-
     ## LaTeX
     texliveFull
 
-    ### Emulator
+    ## Emulator
     # waydroid
     # waydroid-helper
 
@@ -51,13 +35,8 @@
     # claude-code
     codex
 
-    # Graphic
-    ## KDE
-    kdePackages.yakuake
-
     # Office
     thunderbird
-    bitwarden-desktop
     libreoffice
     #aseprite
 
@@ -68,30 +47,16 @@
     #wechat-uos
     wemeet
 
-    ## Document Processing
-    pandoc
-    obsidian
-
     # Browser
     chromium
     # microsoft-edge
 
     # Network
-    ## Utilitis
-    remmina
-    moonlight-qt
-
     ## Cloudflare
     cloudflared
 
     # Deemos
     stripe-cli
-
-    # Multimedia
-    mpv
-    obs-studio
-    gimp3
-    flameshot
 
     ## Calibre
     calibre

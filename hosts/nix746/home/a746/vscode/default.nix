@@ -21,6 +21,7 @@
 
       # About Utilities
       eamodio.gitlens
+      mkhl.direnv
 
       # About Language
       yzhang.markdown-all-in-one

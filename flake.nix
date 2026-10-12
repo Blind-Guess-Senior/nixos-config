@@ -63,7 +63,7 @@
             ./hosts/${settings.htpcHostName}/os-modules/main.nix
 
             {
-              nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+              nix.settings.nix-path = [ "nixpkgs=${inputs.nixpkgs}" ];
             }
 
             home-manager.nixosModules.home-manager
@@ -107,7 +107,7 @@
             ./hosts/${settings.laptopHostName}/os-modules/main.nix
 
             {
-              nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+              nix.settings.nix-path = [ "nixpkgs=${inputs.nixpkgs}" ];
             }
 
             {

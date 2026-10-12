@@ -12,14 +12,6 @@
   ];
 
   home.packages = with pkgs; [
-    # Utils
-    tmux
-    yazi
-
-    # Programming
-    gdb
-    cgdb
-
     # Network
     cloudflared
 
