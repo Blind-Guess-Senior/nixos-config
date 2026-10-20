@@ -34,4 +34,8 @@ in
       wayland.enable = true;
     };
   };
+
+  programs.kde-pim = {
+    enable = false;
+  };
 }
