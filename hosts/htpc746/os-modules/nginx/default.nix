@@ -36,15 +36,12 @@
           '';
         };
       };
-      "pt.blind-guess-senior.cc" = {
+      "git.blind-guess-senior.cc" = {
         forceSSL = false;
         enableACME = false;
         locations."/" = {
-          proxyPass = "http://127.0.0.1:8081/";
-          extraConfig = ''
-            proxy_set_header X-Forwarded-Proto https;
-            proxy_set_header X-Forwarded-Port 443;
-          '';
+          proxyPass = "http://127.0.0.1:7920/";
+          extraConfig = "";
         };
       };
       "library.blind-guess-senior.cc" = {
@@ -56,6 +53,17 @@
             proxy_set_header X-Forwarded-Proto https;
             proxy_set_header X-Forwarded-Port 443;
             client_max_body_size  1024M;
+          '';
+        };
+      };
+      "pt.blind-guess-senior.cc" = {
+        forceSSL = false;
+        enableACME = false;
+        locations."/" = {
+          proxyPass = "http://127.0.0.1:8081/";
+          extraConfig = ''
+            proxy_set_header X-Forwarded-Proto https;
+            proxy_set_header X-Forwarded-Port 443;
           '';
         };
       };

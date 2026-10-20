@@ -8,15 +8,18 @@
 
     ../../../common/os/calibre-web
     ../../../common/os/fonts
+    ../../../common/os/forgejo
     ../../../common/os/git
     ../../../common/os/kde-plasma
     ../../../common/os/nix-ld
     ../../../common/os/pipewire
+    ../../../common/os/postgresql
     ../../../common/os/sops-nix
 
     ./cloudflare-ddns
     ./cloudflared
     ./firewall
+    ./forgejo
     ./kde-plasma
     ./network
     ./nginx

@@ -11,6 +11,7 @@
           "blind-guess-senior.cc" = "http://localhost:80";
           "ssh.blind-guess-senior.cc" = "ssh://localhost:22";
           "bt.blind-guess-senior.cc" = "http://localhost:80";
+          "git.blind-guess-senior.cc" = "http://localhost:7920";
           "pt.blind-guess-senior.cc" = "http://localhost:80";
           "library.blind-guess-senior.cc" = "http://localhost:80";
         };
