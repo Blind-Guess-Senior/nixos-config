@@ -27,8 +27,8 @@
 
     # Nix channels mirror.
     substituters = [
-      "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
-      "https://mirrors.ustc.edu.cn/nix-channels/store"
+      "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store?priority=30"
+      "https://mirrors.ustc.edu.cn/nix-channels/store?priority=30"
       "https://cache.nixos.org/"
     ];
     extra-substituters = [
@@ -84,9 +84,6 @@
   # Enable tlp
   services.tlp.enable = true;
   services.power-profiles-daemon.enable = false;
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;

@@ -42,6 +42,7 @@
     ## Info
     hardinfo2
     pciutils
+    usbutils
 
     # Multimedia
     ffmpeg

@@ -35,7 +35,7 @@ in
     };
   };
 
-  programs.kde-pim = {
+  programs.kde-pim = lib.mkOverride 500 {
     enable = false;
   };
 }

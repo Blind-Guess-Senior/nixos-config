@@ -1,7 +1,7 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 
 {
-  programs.clash-verge = {
+  programs.clash-verge = builtins.mapAttrs (_option: value: lib.mkDefault value) {
     enable = true;
     package = pkgs.clash-verge-rev;
 

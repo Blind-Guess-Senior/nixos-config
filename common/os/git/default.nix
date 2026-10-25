@@ -1,14 +1,7 @@
-{
-  config,
-  pkgs,
-  lib,
-  inputs,
-  outputs,
-  ...
-}:
+{ lib, ... }:
 
 {
-  programs.git = {
+  programs.git = lib.mapAttrsRecursive (_path: value: lib.mkDefault value) {
     enable = true;
     lfs.enable = true;
 

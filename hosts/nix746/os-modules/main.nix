@@ -15,6 +15,7 @@
     ../../../common/os/gnupg
     ../../../common/os/kde-plasma
     ../../../common/os/nix-ld
+    ../../../common/os/printing
     ../../../common/os/sops-nix
 
     ./bluetooth

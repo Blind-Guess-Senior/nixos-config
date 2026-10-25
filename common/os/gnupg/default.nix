@@ -1,17 +1,10 @@
-{
-  config,
-  pkgs,
-  inputs,
-  outputs,
-  settings,
-  ...
-}:
+{ lib, pkgs, ... }:
 
 {
   programs.gnupg = {
     agent = {
       enable = true;
-      pinentryPackage = pkgs.pinentry-curses;
+      pinentryPackage = lib.mkOverride 1500 pkgs.pinentry-curses;
     };
   };
 }

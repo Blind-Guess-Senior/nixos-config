@@ -1,11 +1,4 @@
-{
-  config,
-  pkgs,
-  lib,
-  inputs,
-  outputs,
-  ...
-}:
+{ ... }:
 
 {
   security.rtkit.enable = true;

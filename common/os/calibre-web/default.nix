@@ -1,10 +1,7 @@
-{
-  pkgs,
-  ...
-}:
+{ lib, ... }:
 
 {
-  services.calibre-web = {
+  services.calibre-web = lib.mapAttrsRecursive (_path: value: lib.mkDefault value) {
     enable = true;
     group = "media";
     listen = {

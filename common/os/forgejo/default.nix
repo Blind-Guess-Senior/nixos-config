@@ -1,24 +1,28 @@
-{ config, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   services.forgejo = {
     enable = true;
 
-    package = pkgs.forgejo;
+    package = lib.mkDefault pkgs.forgejo;
 
-    database = {
+    database = builtins.mapAttrs (_option: value: lib.mkDefault value) {
       type = "postgres";
       name = "forgejo";
       user = "forgejo";
       createDatabase = true;
     };
 
-    stateDir = "/mnt/data/forgejo";
     repositoryRoot = "${config.services.forgejo.stateDir}/repositories";
 
-    lfs.enable = true;
+    lfs.enable = lib.mkDefault true;
 
-    settings = {
+    settings = lib.mapAttrsRecursive (_path: value: lib.mkDefault value) {
       actions = {
         ENABLED = true;
       };
@@ -29,6 +33,5 @@
         ALLOW_LOCALNETWORKS = false;
       };
     };
-
   };
 }

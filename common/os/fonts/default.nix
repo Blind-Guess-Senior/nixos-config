@@ -5,21 +5,24 @@
 }:
 
 {
-  fonts.packages = with pkgs; [
-    noto-fonts
+  fonts.packages = lib.mkDefault (
+    with pkgs;
+    [
+      noto-fonts
 
-    fira
+      fira
 
-    source-han-sans
+      source-han-sans
 
-    monaspace
-  ];
+      monaspace
+    ]
+  );
 
   fonts.enableDefaultPackages = lib.mkDefault true;
 
   fonts.fontconfig.enable = true;
   fonts.fontconfig = {
-    defaultFonts = {
+    defaultFonts = builtins.mapAttrs (_option: value: lib.mkDefault value) {
       sansSerif = [
         "Noto Sans"
         "Noto Sans CJK SC"
@@ -44,7 +47,7 @@
     };
   };
 
-  i18n = {
+  i18n = builtins.mapAttrs (_option: value: lib.mkDefault value) {
     defaultLocale = "en_US.UTF-8";
     extraLocales = [ "zh_CN.UTF-8/UTF-8" ];
   };
