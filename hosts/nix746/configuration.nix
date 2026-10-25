@@ -27,8 +27,9 @@
 
     # Nix channels mirror.
     substituters = [
-      "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store?priority=30"
-      "https://mirrors.ustc.edu.cn/nix-channels/store?priority=30"
+      "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store?priority=20"
+      "https://mirrors.ustc.edu.cn/nix-channels/store?priority=20"
+      "https://mirror.sjtu.edu.cn/nix-channels/store?priority=20"
       "https://cache.nixos.org/"
     ];
     extra-substituters = [
