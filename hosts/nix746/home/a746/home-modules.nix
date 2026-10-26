@@ -2,6 +2,8 @@
 
 {
   imports = [
+    ./softwares.nix
+
     ../../../../common/home/general-softwares/utils.nix
     ../../../../common/home/general-softwares/develop.nix
     ../../../../common/home/general-softwares/desktop.nix
