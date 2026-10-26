@@ -7,6 +7,7 @@
     ../../../common/os/general-softwares/develop.nix
     ../../../common/os/general-softwares/desktop.nix
 
+    ../../../common/os/clamav
     ../../../common/os/clash-verge
     ../../../common/os/envfs
     ../../../common/os/fcitx5
@@ -20,6 +21,7 @@
     ../../../common/os/sops-nix
 
     ./bluetooth
+    ./clamav
     ./cloudflare-ddns
     ./fonts
     ./network

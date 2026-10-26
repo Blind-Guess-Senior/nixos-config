@@ -6,6 +6,7 @@
     ../../../common/os/general-softwares/utils.nix
     ../../../common/os/general-softwares/develop.nix
 
+    ../../../common/os/clamav
     ../../../common/os/calibre-web
     ../../../common/os/fonts
     ../../../common/os/forgejo
