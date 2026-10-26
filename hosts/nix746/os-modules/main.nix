@@ -17,6 +17,7 @@
     ../../../common/os/kde-plasma
     ../../../common/os/kmscon
     ../../../common/os/nix-ld
+    ../../../common/os/openssh
     ../../../common/os/printing
     ../../../common/os/sops-nix
 

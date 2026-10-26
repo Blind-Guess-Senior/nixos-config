@@ -3,7 +3,7 @@
 {
   services.forgejo = {
     stateDir = "/mnt/data/forgejo";
-    
+
     settings = {
       server = {
         DOMAIN = "git.blind-guess-senior.cc";

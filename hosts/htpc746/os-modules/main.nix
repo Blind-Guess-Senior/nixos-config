@@ -13,6 +13,7 @@
     ../../../common/os/git
     ../../../common/os/kde-plasma
     ../../../common/os/nix-ld
+    ../../../common/os/openssh
     ../../../common/os/pipewire
     ../../../common/os/postgresql
     ../../../common/os/sops-nix
