@@ -11,6 +11,7 @@
     ../../../common/os/fonts
     ../../../common/os/forgejo
     ../../../common/os/git
+    ../../../common/os/hedgedoc
     ../../../common/os/kde-plasma
     ../../../common/os/nix-ld
     ../../../common/os/openssh
@@ -22,6 +23,7 @@
     ./cloudflared
     ./firewall
     ./forgejo
+    ./hedgedoc
     ./kde-plasma
     ./network
     ./nginx

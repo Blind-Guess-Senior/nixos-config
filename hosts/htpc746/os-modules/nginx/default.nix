@@ -67,6 +67,18 @@
           '';
         };
       };
+      "doc.blind-guess-senior.cc" = {
+        forceSSL = false;
+        enableACME = false;
+        locations."/" = {
+          proxyPass = "http://127.0.0.1:8084/";
+          extraConfig = ''
+            proxy_set_header X-Forwarded-Proto https;
+            proxy_set_header X-Forwarded-Port 443;
+            proxy_set_header Host $host;
+          '';
+        };
+      };
     };
 
     virtualHosts = {
