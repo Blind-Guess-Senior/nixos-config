@@ -26,6 +26,7 @@
     ./network
     ./nginx
     ./openssh
+    ./postgresql
     ./qbee
     ./transmission
   ];

@@ -1,11 +1,4 @@
-{
-  config,
-  pkgs,
-  inputs,
-  outputs,
-  settings,
-  ...
-}:
+{ pkgs, ... }:
 
 {
   services.postgresql = {

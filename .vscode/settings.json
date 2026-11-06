@@ -1,0 +1,53 @@
+{
+    "[nix]": {
+        "editor.defaultFormatter": "jnoortheen.nix-ide",
+        "editor.quickSuggestions": {
+            "other": "on",
+            "comments": "off",
+            "strings": "off"
+        },
+        "editor.suggestOnTriggerCharacters": true
+    },
+    "nix.enableLanguageServer": true,
+    "nix.serverPath": "nixd",
+    "nix.formatterPath": [
+        "nixfmt",
+        "treefmt",
+        "nixpkgs-fmt"
+    ],
+    "nix.serverSettings": {
+        "nixd": {
+            "nixpkgs": {
+                "expr": "import (builtins.getFlake (builtins.toString ./.)).inputs.nixpkgs { }"
+            },
+            "formatting": {
+                "command": [
+                    "nixfmt"
+                ]
+            },
+            "options": { // Map of eval information
+                // By default, this entriy will be read from `import <nixpkgs> { }`
+                // You can write arbitary nix expression here, to produce valid "options" declaration result.
+                //
+                // *NOTE*: Replace "<name>" below with your actual configuration name.
+                // If you're unsure what to use, you can verify with `nix repl` by evaluating
+                // the expression directly.
+                //
+                "nixos": {
+                    "expr": "(builtins.getFlake (builtins.toString ./.)).nixosConfigurations.nix746.options"
+                },
+                // Before configuring Home Manager options, consider your setup:
+                // Which command do you use for home-manager switching?
+                //
+                //  A. home-manager switch --flake .#... (standalone Home Manager)
+                //  B. nixos-rebuild switch --flake .#... (NixOS with integrated Home Manager)
+                //
+                // Configuration examples for both approaches are shown below.
+                "home-manager": {
+                    // B:
+                    "expr": "(builtins.getFlake (builtins.toString ./.)).nixosConfigurations.nix746.options.home-manager.users.type.getSubOptions []"
+                }
+            },
+        }
+    },
+}
