@@ -41,7 +41,13 @@
         enableACME = false;
         locations."/" = {
           proxyPass = "http://127.0.0.1:7920/";
-          extraConfig = "";
+          extraConfig = ''
+            client_max_body_size 50m;
+            client_body_timeout 300s;
+            proxy_send_timeout 300s;
+            proxy_read_timeout 300s;
+            send_timeout 300s;
+          '';
         };
       };
       "library.blind-guess-senior.cc" = {
