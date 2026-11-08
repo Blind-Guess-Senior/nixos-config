@@ -31,6 +31,7 @@
     ./postgresql
     ./qbee
     ./transmission
+    ./webhook
   ];
 
   # Enable nix-ld

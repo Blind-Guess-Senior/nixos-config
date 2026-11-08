@@ -1,11 +1,4 @@
-{
-  config,
-  pkgs,
-  lib,
-  inputs,
-  outputs,
-  ...
-}:
+{ ... }:
 
 {
   services.nginx = {
@@ -83,6 +76,23 @@
             proxy_set_header X-Forwarded-Port 443;
             proxy_set_header Host $host;
           '';
+        };
+      };
+
+      "oneday.blind-guess-senior.cc" = {
+        forceSSL = false;
+        enableACME = false;
+        root = "/srv/www/oneday";
+        locations."/" = {
+          tryFiles = "$uri $uri/ =404";
+        };
+      };
+      "www.blind-guess-senior.cc" = {
+        forceSSL = false;
+        enableACME = false;
+        root = "/srv/www/blind-guess-senior.cc";
+        locations."/" = {
+          tryFiles = "$uri $uri/ =404";
         };
       };
     };

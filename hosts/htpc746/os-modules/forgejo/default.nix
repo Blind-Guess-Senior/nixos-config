@@ -11,6 +11,9 @@
         HTTP_PORT = 7920;
         SSH_PORT = 7922;
       };
+      webhook = {
+        ALLOWED_HOST_LIST = "external,loopback";
+      };
     };
   };
 }
