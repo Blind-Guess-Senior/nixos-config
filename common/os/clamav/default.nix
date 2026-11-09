@@ -8,7 +8,7 @@
       enable = true;
     };
 
-    updater = {
+    updater = lib.mkDefault {
       enable = true;
       interval = "hourly";
     };
