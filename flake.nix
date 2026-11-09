@@ -2,6 +2,7 @@
   description = "Blind Guess Senior's Nix configuration";
 
   inputs = {
+    # ======= core inputs =======
     # This is pointing to an unstable release.
     # If you prefer a stable release instead, you can this to the latest number shown here: https://nixos.org/download
     # i.e. nixos-24.11
@@ -16,16 +17,23 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # nix-minecraft.url = "github:Infinidoge/nix-minecraft";
+    # ======= dev inputs =======
     nix-jetbrains-plugins.url = "github:nix-community/nix-jetbrains-plugins";
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 
+    # ======= extra lib inputs =======
+    dwproton.url = "github:imaviso/dwproton-flake";
+
+    # ======= extra package inputs =======
     deepseek-harness.url = "github:moraxyc/deepseek-harness.nix";
 
     blind-guess-senior-nix-packages = {
       url = "github:Blind-Guess-Senior/nix-packages";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # ======= extra services =======
+    # nix-minecraft.url = "github:Infinidoge/nix-minecraft";
   };
 
   outputs =

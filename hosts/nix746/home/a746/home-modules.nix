@@ -21,6 +21,7 @@
     ./git
     ./jetbrains-rider
     ./jetbrains-webstorm
+    ./lutris
     ./lutris-coverup
     ./sops-nix
     ./vscode
