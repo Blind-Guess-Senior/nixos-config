@@ -6,13 +6,16 @@
     ../../../common/os/general-softwares/utils.nix
     ../../../common/os/general-softwares/develop.nix
 
+    ../../../common/os/graphics
+    ../../../common/os/display-manager/sddm
+    ../../../common/os/desktop-environment/plasma6
+
     ../../../common/os/clamav
     ../../../common/os/calibre-web
     ../../../common/os/fonts
     ../../../common/os/forgejo
     ../../../common/os/git
     ../../../common/os/hedgedoc
-    ../../../common/os/kde-plasma
     ../../../common/os/nix-ld
     ../../../common/os/openssh
     ../../../common/os/pipewire
@@ -24,7 +27,7 @@
     ./firewall
     ./forgejo
     ./hedgedoc
-    ./kde-plasma
+    ./sddm
     ./network
     ./nginx
     ./openssh

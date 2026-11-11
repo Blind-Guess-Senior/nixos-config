@@ -24,18 +24,4 @@ in
       gpuPackages.${gpu} or (throw "Unsupported GPU type: ${gpu}")
     );
   };
-
-  # Enable KDE Plasma
-  services = {
-    desktopManager.plasma6.enable = true;
-
-    displayManager.sddm = {
-      enable = true;
-      wayland.enable = true;
-    };
-  };
-
-  programs.kde-pim = lib.mkOverride 500 {
-    enable = false;
-  };
 }

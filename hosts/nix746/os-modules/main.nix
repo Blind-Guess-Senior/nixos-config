@@ -7,6 +7,11 @@
     ../../../common/os/general-softwares/develop.nix
     ../../../common/os/general-softwares/desktop.nix
 
+    ../../../common/os/graphics
+    ../../../common/os/display-manager/sddm
+    ../../../common/os/desktop-environment/plasma6
+    ../../../common/os/wayland-compositor/niri
+
     ../../../common/os/clamav
     ../../../common/os/clash-verge
     ../../../common/os/envfs
@@ -14,7 +19,6 @@
     ../../../common/os/fonts
     ../../../common/os/git
     ../../../common/os/gnupg
-    ../../../common/os/kde-plasma
     ../../../common/os/kmscon
     ../../../common/os/nix-ld
     ../../../common/os/openssh
