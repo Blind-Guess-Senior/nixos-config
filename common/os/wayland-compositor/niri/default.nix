@@ -21,8 +21,15 @@
     kdePackages.polkit-kde-agent-1
     # X11 compatibility
     xwayland-satellite
-    # Start App
-    fuzzel
+
+    # Utils
+    pwvucontrol # control audio
+    playerctl # control media play
+    fuzzel # open app
+    waybar # status bar
+    brightnessctl # control screen brightness
+
+    # Applications
   ];
 
   services.gnome.gnome-keyring.enable = false;

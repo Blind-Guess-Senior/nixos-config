@@ -12,6 +12,8 @@
         fcitx5-nord
         fcitx5-mozc
       ];
+
+      waylandFrontend = true;
     };
   };
 }
