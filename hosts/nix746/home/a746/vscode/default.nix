@@ -18,14 +18,17 @@
       mkhl.direnv
 
       # About Language
+      ## Programming Language
+      # ms-vscode.cpptools
+      rust-lang.rust-analyzer
+      # ocamllabs.ocaml-platform
+      jnoortheen.nix-ide
+      ## Mark & Document Language
       yzhang.markdown-all-in-one
       james-yu.latex-workshop
       tamasfe.even-better-toml
       redhat.vscode-yaml
-      # ocamllabs.ocaml-platform
-      jnoortheen.nix-ide
-      # ms-vscode.cpptools
-      rust-lang.rust-analyzer
+      kdl-org.kdl
 
       # About Others
       yltx.vscode-luogu
