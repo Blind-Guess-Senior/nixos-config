@@ -26,6 +26,7 @@
 
     # ======= extra package inputs =======
     deepseek-harness.url = "github:moraxyc/deepseek-harness.nix";
+    claude-code-packed.url = "github:sadjow/claude-code-nix";
 
     blind-guess-senior-nix-packages = {
       url = "github:Blind-Guess-Senior/nix-packages";

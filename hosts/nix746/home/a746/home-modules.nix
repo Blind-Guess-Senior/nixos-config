@@ -9,6 +9,7 @@
     ../../../../common/home/general-softwares/desktop.nix
     ../../../../common/home/general-softwares/fun.nix
 
+    ../../../../common/home/claude-code
     ../../../../common/home/deepseek-harness
     ../../../../common/home/direnv
     ../../../../common/home/firefox
@@ -18,6 +19,7 @@
     ../../../../common/home/lutris
     ../../../../common/home/nvim
 
+    ./cc-switch
     ./git
     ./jetbrains-rider
     ./jetbrains-webstorm
