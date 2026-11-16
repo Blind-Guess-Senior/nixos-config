@@ -12,10 +12,4 @@
     terminal = false;
     mimeType = [ "x-scheme-handler/ccswitch" ];
   };
-  xdg.mimeApps = {
-    enable = true;
-    defaultApplications."x-scheme-handler/ccswitch" = [
-      "cc-switch-url-handler"
-    ];
-  };
 }
