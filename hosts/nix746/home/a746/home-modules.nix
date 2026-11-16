@@ -10,6 +10,7 @@
     ../../../../common/home/general-softwares/fun.nix
 
     ../../../../common/home/claude-code
+    ../../../../common/home/chromium
     ../../../../common/home/deepseek-harness
     ../../../../common/home/direnv
     ../../../../common/home/firefox

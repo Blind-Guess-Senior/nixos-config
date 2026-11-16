@@ -12,9 +12,6 @@
     pandoc
     obsidian
 
-    # Browser
-    chromium
-
     # Network
     ## Utilitis
     remmina

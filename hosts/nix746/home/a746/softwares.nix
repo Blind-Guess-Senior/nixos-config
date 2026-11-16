@@ -40,10 +40,6 @@ let
   ];
 
   dailyPackages = with pkgs; [
-    # Browser
-    chromium
-    # microsoft-edge
-
     cloudflared
 
     calibre
