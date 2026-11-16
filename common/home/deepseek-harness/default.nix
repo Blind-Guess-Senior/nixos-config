@@ -16,10 +16,7 @@
         tui
         web-app
         annotation
-        at-file
-        billion-context
         web-ui
-        modsearch
         remote
         usage-stats
         vision-toolkit

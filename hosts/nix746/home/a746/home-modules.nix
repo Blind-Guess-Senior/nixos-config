@@ -18,6 +18,7 @@
     ../../../../common/home/git
     ../../../../common/home/go-musicfox
     ../../../../common/home/lutris
+    ../../../../common/home/mako
     ../../../../common/home/nvim
 
     ./cc-switch
