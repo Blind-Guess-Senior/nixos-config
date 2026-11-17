@@ -12,6 +12,7 @@
     ../../../common/os/desktop-environment/plasma6
     ../../../common/os/wayland-compositor/niri
 
+    ../../../common/os/bluetooth
     ../../../common/os/clamav
     ../../../common/os/clash-verge
     ../../../common/os/envfs
