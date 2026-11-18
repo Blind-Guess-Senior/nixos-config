@@ -2,11 +2,16 @@
 
 {
   imports = [
+    # Application Sets
     ./os-softwares.nix
+
     ../../../common/os/general-softwares/utils.nix
     ../../../common/os/general-softwares/develop.nix
+    ../../../common/os/general-softwares/networking.nix
+
     ../../../common/os/general-softwares/desktop.nix
 
+    # Per Application
     ../../../common/os/graphics
     ../../../common/os/display-manager/sddm
     ../../../common/os/desktop-environment/plasma6
