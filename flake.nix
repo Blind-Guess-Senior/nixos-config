@@ -23,8 +23,8 @@
     };
 
     # ======= dev inputs =======
-    nix-jetbrains-plugins.url = "github:nix-community/nix-jetbrains-plugins";
-    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
+    nix-jetbrains-plugins.url = "git+https://github.com/nix-community/nix-jetbrains-plugins";
+    nix-vscode-extensions.url = "git+https://github.com/nix-community/nix-vscode-extensions";
 
     # ======= extra lib inputs =======
     dwproton.url = "github:imaviso/dwproton-flake";
@@ -59,6 +59,10 @@
 
       arguments = { inherit inputs outputs settings; };
 
+      homeArguments = arguments // {
+        utils = import ./utils;
+      };
+
       argumentsWithHostinfo =
         host:
         arguments
@@ -84,7 +88,7 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = arguments;
+              home-manager.extraSpecialArgs = homeArguments;
               # home-manager.backupFileExtension = "hm-backup-${toString self.lastModified}";
               home-manager.backupFileExtension = "hm-backup";
               home-manager.backupCommand = "mv $1 $1-$(date +%s).hm-backup";
@@ -142,7 +146,7 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = arguments;
+              home-manager.extraSpecialArgs = homeArguments;
               home-manager.backupFileExtension = "hm-backup";
               home-manager.backupCommand = "mv $1 $1-$(date +%s).hm-backup";
 

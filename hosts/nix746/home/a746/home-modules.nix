@@ -1,7 +1,11 @@
 { ... }:
 
 {
+  # TODO: 剪贴板 文本编辑器
+
   imports = [
+    ../../../../common/home/desktop-envrionment/niri.nix
+
     ./softwares.nix
 
     ../../../../common/home/general-softwares/utils.nix
@@ -18,7 +22,6 @@
     ../../../../common/home/git
     ../../../../common/home/go-musicfox
     ../../../../common/home/lutris
-    ../../../../common/home/mako
     ../../../../common/home/nvim
 
     ./cc-switch

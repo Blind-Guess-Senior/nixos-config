@@ -18,6 +18,10 @@ in
       altScreen = true;
       enableMouseEvent = true;
       frameRate = 5;
+
+      notification = {
+        albumCover = true;
+      };
     };
 
     theme = {
@@ -38,5 +42,4 @@ in
       };
     };
   };
-
 }

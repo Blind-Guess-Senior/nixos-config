@@ -10,5 +10,8 @@
     # Wayland
     wayland-utils
     wl-clipboard
+
+    # Utils
+    wl-mirror # mirror screen outputs
   ];
 }

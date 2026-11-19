@@ -1,6 +1,7 @@
 { lib, ... }:
 
 {
+  # TODO: move to user space
   services.desktopManager = {
     plasma6 = {
       enable = true;

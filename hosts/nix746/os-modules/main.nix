@@ -14,8 +14,7 @@
     # Per Application
     ../../../common/os/graphics
     ../../../common/os/display-manager/sddm
-    ../../../common/os/desktop-environment/plasma6
-    ../../../common/os/wayland-compositor/niri
+    # ../../../common/os/desktop-environment/plasma6
 
     ../../../common/os/bluetooth
     ../../../common/os/clamav
@@ -37,6 +36,7 @@
     ./fonts
     ./network
     ./postgresql
+    ./sddm
 
     ./os-dev.nix
   ];

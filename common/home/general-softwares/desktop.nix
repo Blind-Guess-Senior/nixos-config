@@ -2,10 +2,6 @@
 
 {
   home.packages = with pkgs; [
-    # Graphic
-    ## KDE
-    kdePackages.yakuake
-
     # Office
     bitwarden-desktop
     ## Document Processing

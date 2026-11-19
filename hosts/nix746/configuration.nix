@@ -43,6 +43,9 @@
 
     # GOPROXY for root. e.g. sudo nixos-rebuild switch
     impure-env = [ "GOPROXY=https://goproxy.cn,direct" ];
+
+    # Finish independent tasks so a failed download does not cancel their work.
+    keep-going = true;
   };
 
   # Allow unfree

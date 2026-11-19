@@ -29,9 +29,9 @@
       tamasfe.even-better-toml
       redhat.vscode-yaml
       kdl-org.kdl
+      redhat.vscode-xml
 
       # About Others
-      yltx.vscode-luogu
     ];
   };
 }
