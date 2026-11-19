@@ -17,7 +17,6 @@
 
     # AI
     codex
-    cc-switch
   ];
 
   home.stateVersion = "26.11";
