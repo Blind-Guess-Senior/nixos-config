@@ -12,6 +12,9 @@
         "sudo nix profile wipe-history --profile /nix/var/nix/profiles/system  --older-than 14d";
       "osgc14" = "sudo nix-collect-garbage --delete-older-than 14d";
       "osrepl" = "nix repl -f flake:nixpkgs";
+
+      "hsops" =
+        ''sudo env EDITOR=nano SOPS_AGE_KEY="$(sudo ssh-to-age -private-key -i /etc/ssh/ssh_host_ed25519_key)" sops'';
     };
 
     plugins = [

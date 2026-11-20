@@ -31,6 +31,12 @@
     ## File System
     parted
 
+    # Other Utils
+    ssh-to-age
+    ssh-to-pgp
+    age
+    openssl
+
     # Shell
     zsh
     fish
