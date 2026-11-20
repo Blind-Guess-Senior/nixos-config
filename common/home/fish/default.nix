@@ -7,6 +7,11 @@
     shellAliases = {
       "osupd" = "sudo nixos-rebuild switch --show-trace";
       "osdry" = "sudo nixos-rebuild dry-activate --show-trace";
+      "oshistory" = "nix profile history --profile /nix/var/nix/profiles/system";
+      "osclean14" =
+        "sudo nix profile wipe-history --profile /nix/var/nix/profiles/system  --older-than 14d";
+      "osgc14" = "sudo nix-collect-garbage --delete-older-than 14d";
+      "osrepl" = "nix repl -f flake:nixpkgs";
     };
 
     plugins = [
