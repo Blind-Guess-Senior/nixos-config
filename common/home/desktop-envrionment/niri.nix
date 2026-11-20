@@ -14,14 +14,24 @@
   services.network-manager-applet.enable = true;
   services.hyprpolkitagent.enable = true;
 
+  programs.fuzzel = {
+    enable = true;
+    settings = {
+      main = {
+        terminal = "${pkgs.alacritty}/bin/alacritty -e {cmd}";
+      };
+    };
+  };
+
   home.packages = with pkgs; [
     pwvucontrol
     playerctl
     brightnessctl
     kdePackages.systemsettings
+    networkmanagerapplet
 
-    fuzzel
     kdePackages.dolphin
+    kdePackages.kwalletmanager
     kdePackages.filelight
     kdePackages.konsole
     alacritty
