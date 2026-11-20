@@ -79,6 +79,15 @@
         };
       };
 
+      "firefly.blind-guess-senior.cc" = {
+        forceSSL = false;
+        enableACME = false;
+        # No proxyPass no root，firefly-iii's enableNginx do everything (like PHP-FPM rules)
+        extraConfig = ''
+          client_max_body_size 64M;
+        '';
+      };
+
       "oneday.blind-guess-senior.cc" = {
         forceSSL = false;
         enableACME = false;

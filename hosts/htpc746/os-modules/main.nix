@@ -12,6 +12,7 @@
 
     ../../../common/os/clamav
     ../../../common/os/calibre-web
+    ../../../common/os/firefly-iii
     ../../../common/os/fonts
     ../../../common/os/forgejo
     ../../../common/os/git
@@ -24,6 +25,7 @@
 
     ./cloudflare-ddns
     ./cloudflared
+    ./firefly-iii
     ./firewall
     ./forgejo
     ./hedgedoc

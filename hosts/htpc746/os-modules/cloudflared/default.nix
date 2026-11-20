@@ -15,6 +15,7 @@
           "pt.blind-guess-senior.cc" = "http://localhost:80";
           "doc.blind-guess-senior.cc" = "http://localhost:80";
           "library.blind-guess-senior.cc" = "http://localhost:80";
+          "firefly.blind-guess-senior.cc" = "http://localhost:80";
 
           "oneday.blind-guess-senior.cc" = "http://localhost:80";
           "www.blind-guess-senior.cc" = "http://localhost:80";
