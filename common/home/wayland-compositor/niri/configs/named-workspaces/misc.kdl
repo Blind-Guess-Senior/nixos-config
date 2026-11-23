@@ -1,0 +1,22 @@
+workspace "misc" {
+    open-on-output "eDP-1"
+}
+
+spawn-at-startup "QQ"
+
+window-rule {
+    match app-id="QQ"
+    open-on-workspace "misc"
+}
+
+spawn-at-startup "clash-verge"
+
+window-rule {
+    match app-id="clash-verge"
+    open-on-workspace "misc"
+}
+
+window-rule {
+    match app-id="^Alacritty$" title="musicfox"
+    open-on-workspace "misc"
+}

@@ -18,7 +18,7 @@
     enable = true;
     settings = {
       main = {
-        terminal = "${pkgs.alacritty}/bin/alacritty -e {cmd}";
+        terminal = "${pkgs.alacritty}/bin/alacritty -T '{cmd}' -e {cmd}";
       };
     };
   };

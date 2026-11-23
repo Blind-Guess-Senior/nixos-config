@@ -42,4 +42,15 @@ in
       };
     };
   };
+
+  xdg.desktopEntries."musicfox" = {
+    name = "Musicfox";
+    comment = "Terminal NetEase Cloud Music client";
+    exec = "musicfox";
+    terminal = true;
+    categories = [
+      "Music"
+      "Player"
+    ];
+  };
 }

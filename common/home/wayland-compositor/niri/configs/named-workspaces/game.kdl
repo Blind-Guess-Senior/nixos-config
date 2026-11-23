@@ -1,0 +1,8 @@
+workspace "game" {
+    open-on-output "eDP-1"
+}
+
+window-rule {
+    match app-id="lutris"
+    open-on-workspace "game"
+}

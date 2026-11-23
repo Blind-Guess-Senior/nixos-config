@@ -10,6 +10,7 @@ include "spawn.kdl"
 include "animations.kdl"
 include "window-rule.kdl"
 include "binds.kdl"
+include "named-workspace.kdl"
 
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.

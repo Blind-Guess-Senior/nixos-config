@@ -1,0 +1,4 @@
+workspace "deemos" {
+    open-on-output "Xiaomi Corporation Mi Monitor 7089300064400"
+    // open-on-output "eDP-1"
+}

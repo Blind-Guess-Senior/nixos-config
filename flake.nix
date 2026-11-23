@@ -89,9 +89,8 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.extraSpecialArgs = homeArguments;
-              # home-manager.backupFileExtension = "hm-backup-${toString self.lastModified}";
               home-manager.backupFileExtension = "hm-backup";
-              home-manager.backupCommand = "mv $1 $1-$(date +%s).hm-backup";
+              home-manager.overwriteBackup = true;
 
               home-manager.sharedModules = [
                 sops-nix.homeModules.default
@@ -148,7 +147,7 @@
               home-manager.useUserPackages = true;
               home-manager.extraSpecialArgs = homeArguments;
               home-manager.backupFileExtension = "hm-backup";
-              home-manager.backupCommand = "mv $1 $1-$(date +%s).hm-backup";
+              home-manager.overwriteBackup = true;
 
               home-manager.sharedModules = [
                 sops-nix.homeModules.default

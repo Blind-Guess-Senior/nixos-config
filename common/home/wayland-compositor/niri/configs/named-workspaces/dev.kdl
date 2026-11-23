@@ -1,0 +1,17 @@
+workspace "dev"{
+    open-on-output "eDP-1"
+}
+
+spawn-at-startup "firefox"
+
+window-rule {
+    match at-startup=true app-id="firefox"
+    open-on-workspace "dev"
+}
+
+spawn-at-startup "code"
+
+window-rule {
+    match at-startup=true app-id="code"
+    open-on-workspace "dev"
+}

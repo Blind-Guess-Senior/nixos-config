@@ -32,6 +32,8 @@
     parted
 
     # Other Utils
+    socat
+    ## Crypto
     ssh-to-age
     ssh-to-pgp
     age
