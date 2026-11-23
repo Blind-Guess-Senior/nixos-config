@@ -1,8 +1,6 @@
 { ... }:
 
 {
-  # TODO: 剪贴板 文本编辑器
-
   imports = [
     ../../../../common/home/desktop-envrionment/niri.nix
 
