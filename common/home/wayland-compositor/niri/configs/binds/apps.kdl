@@ -4,5 +4,5 @@ binds {
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     // Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
-    Mod+V { spawn-sh "cliphist list | fuzzel --dmenu --with-nth 2 --placeholder 'Search in clipboard...' | cliphist decode | wl-copy"; }
+    Mod+V { spawn "alacritty" "--class" "clipse-float" "-e" "clipse"; }
 }

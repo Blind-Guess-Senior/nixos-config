@@ -1,0 +1,6 @@
+window-rule {
+    match app-id="^clipse-float$"
+    open-floating true
+    default-column-width { fixed 620; }
+    default-window-height { fixed 650; }
+}

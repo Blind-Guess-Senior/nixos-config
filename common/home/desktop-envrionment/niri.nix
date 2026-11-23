@@ -29,6 +29,7 @@
     brightnessctl
     kdePackages.systemsettings
     networkmanagerapplet
+    clipse
 
     kdePackages.dolphin
     kdePackages.kwalletmanager
