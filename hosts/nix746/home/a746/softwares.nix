@@ -2,6 +2,8 @@
 
 let
   developPackages = with pkgs; [
+    python3
+
     # LaTeX
     texliveFull
 

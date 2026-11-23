@@ -1,8 +1,4 @@
-{
-  lib,
-  pkgs,
-  ...
-}:
+{ pkgs, ... }:
 
 {
   fonts.packages = with pkgs; [
@@ -11,7 +7,7 @@
     freefont_ttf
     gyre-fonts # TrueType substitutes for standard PostScript fonts
     liberation_ttf
-    unifont
+    # unifont
 
     noto-fonts
     noto-fonts-cjk-sans-static
@@ -22,8 +18,17 @@
 
     source-han-sans
 
+    font-awesome
+    nerd-fonts.symbols-only
+
     monaspace
   ];
 
   fonts.enableDefaultPackages = false;
+
+  fonts.fontconfig.defaultFonts = {
+    emoji = [
+      "Font Awesome 7 Free"
+    ];
+  };
 }

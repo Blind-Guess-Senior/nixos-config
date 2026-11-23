@@ -6,3 +6,8 @@ window-rule {
     match app-id="lutris"
     open-on-workspace "game"
 }
+
+window-rule {
+    match app-id="^steam_app_default$" title="^Xel Launcher$"
+    open-on-workspace "game"
+}

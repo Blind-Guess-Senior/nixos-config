@@ -1,0 +1,146 @@
+* {
+    font-family: "Noto Sans", "Fira Sans", "Noto Sans CJK SC", "SymbolsNerd Font", "Symbols Nerd Font Mono", "Font Awesome 7 Free Solid", "Font Awesome 7 Free", "Font Awesome 7 Brands", "Noto Color Emoji", sans-serif;
+    font-size: 14px;
+    border: none;
+    border-radius: 0;
+}
+
+window#waybar {
+    background-color: rgba(20, 20, 20, 0.94);
+    color: #dcdcdc;
+    border: 1px solid #2b2b2b;
+}
+
+/* 左侧工作区：去掉僵硬灰块，纯文字明暗 + 细底线 */
+#workspaces {
+    margin: 0 8px 0 6px;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    color: #666666;
+    background: transparent;
+}
+
+#workspaces button:hover {
+    color: #bbbbbb;
+    background: transparent;
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+    color: #ffffff;
+    box-shadow: inset 0 -2px #ffffff;
+}
+
+#workspaces button.urgent {
+    color: #e06c75;
+    box-shadow: inset 0 -2px #e06c75;
+}
+
+/* 媒体控件：无框，融入栏内 */
+#media {
+    margin-left: 8px;
+}
+
+#custom-media-scroll {
+    padding: 0 6px;
+    color: #c8c8c8;
+    background: transparent;
+}
+
+#custom-media-scroll.scrolling {
+    min-width: 165px;
+}
+
+#custom-media-scroll.paused {
+    color: #707070;
+}
+
+#custom-media-scroll.stopped {
+    padding: 0;
+    min-width: 0;
+}
+
+#custom-media-prev,
+#custom-media-next {
+    padding: 0 4px;
+    color: #888888;
+    background: transparent;
+}
+
+#custom-media-prev:hover,
+#custom-media-next:hover {
+    color: #ffffff;
+}
+
+#custom-media-time {
+    padding: 0 8px 0 4px;
+    color: #787878;
+    font-family: "Monaspace Neon", monospace;
+}
+
+/* 中间窗口标题 */
+#window {
+    color: #b8b8b8;
+    padding: 0 8px;
+}
+
+/* 右侧硬件监测：暗一档灰阶，无框 */
+#hardware {
+    margin-right: 12px;
+}
+
+#cpu,
+#memory,
+#temperature,
+#backlight {
+    padding: 0 6px;
+    color: #787878;
+}
+
+#temperature.critical {
+    color: #e06c75;
+}
+
+/* 右侧核心状态：正常亮度，无框 */
+#system {
+    margin-right: 10px;
+}
+
+#pulseaudio,
+#network,
+#battery {
+    padding: 0 7px;
+    color: #dddddd;
+}
+
+#pulseaudio.muted,
+#network.disconnected {
+    color: #666666;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: #98c379;
+}
+
+#battery.warning:not(.charging) {
+    color: #e5c07b;
+}
+
+#battery.critical:not(.charging) {
+    color: #e06c75;
+}
+
+/* 托盘 */
+#tray {
+    padding: 0 8px;
+}
+
+/* 最右端时钟：纯白加粗，无框收尾 */
+#clock {
+    padding: 0 12px 0 8px;
+    color: #ffffff;
+    font-weight: bold;
+}

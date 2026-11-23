@@ -46,4 +46,6 @@
   programs.nix-ld.enable = true;
 
   programs.gamemode.enable = true;
+
+  services.playerctld.enable = true;
 }

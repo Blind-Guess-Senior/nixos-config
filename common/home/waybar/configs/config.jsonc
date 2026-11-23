@@ -1,0 +1,157 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "margin-top": 6,
+    "margin-left": 8,
+    "margin-right": 8,
+    "spacing": 6,
+
+    "modules-left": [
+        "niri/workspaces",
+        "group/media",
+        "custom/media-time"
+    ],
+    "modules-center": [
+        "niri/window"
+    ],
+    "modules-right": [
+        "group/hardware",
+        "group/system",
+        "tray",
+        "clock"
+    ],
+
+    "niri/workspaces": {
+        "format": "{value}"
+    },
+
+    "niri/window": {
+        "max-length": 60,
+        "separate-outputs": true,
+        "rewrite": {
+            "(.*) - Visual Studio Code": "$1",
+            "(.*) — Mozilla Firefox": "$1"
+        }
+    },
+
+    "group/media": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 200,
+            "children-class": "media-btn",
+            "transition-left-to-right": true
+        },
+        "modules": [
+            "custom/media-scroll",
+            "custom/media-prev",
+            "custom/media-next"
+        ]
+    },
+    "custom/media-scroll": {
+        "exec": "$HOME/.config/waybar/scripts/scroll-mpris.py",
+        "return-type": "json",
+        "escape": true,
+        "on-click": "playerctl play-pause",
+        "on-click-right": "playerctl next",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous"
+    },
+    "custom/media-prev": {
+        "format": "  ",
+        "tooltip": false,
+        "on-click": "playerctl previous"
+    },
+    "custom/media-next": {
+        "format": "  ",
+        "tooltip": false,
+        "on-click": "playerctl next"
+    },
+    "custom/media-time": {
+        "exec": "t=$(playerctl metadata --format '{{duration(position)}}/{{duration(mpris:length)}}' 2>/dev/null); [ -n \"$t\" ] && [ \"$t\" != '/' ] && echo \"$t\" || echo ''",
+        "interval": 1,
+        "tooltip": false
+    },
+
+    "group/hardware": {
+        "orientation": "horizontal",
+        "modules": [
+            "cpu",
+            "memory",
+            "temperature",
+            "backlight"
+        ]
+    },
+
+    "group/system": {
+        "orientation": "horizontal",
+        "modules": [
+            "pulseaudio",
+            "network",
+            "battery"
+        ]
+    },
+
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": true
+    },
+    "memory": {
+        "format": "{}% "
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", ""]
+    },
+    "backlight": {
+        "format": "{percent}% {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-full": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "tray": {
+        "icon-size": 15,
+        "spacing": 8
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    }
+}
