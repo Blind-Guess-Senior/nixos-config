@@ -9,6 +9,7 @@
 
     "modules-left": [
         "niri/workspaces",
+        "custom/media-toggle",
         "group/media",
         "custom/media-time"
     ],
@@ -35,6 +36,13 @@
         }
     },
 
+    "custom/media-toggle": {
+        "exec": "s=$(playerctl status 2>/dev/null); [ \"$s\" = 'Playing' ] && echo '▶' || ([ \"$s\" = 'Paused' ] && echo '⏸' || echo '')",
+        "interval": 1,
+        "signal": 8,
+        "tooltip": false,
+        "on-click": "playerctl play-pause && pkill -RTMIN+8 waybar"
+    },
     "group/media": {
         "orientation": "horizontal",
         "drawer": {
@@ -52,7 +60,9 @@
         "exec": "$HOME/.config/waybar/scripts/scroll-mpris.py",
         "return-type": "json",
         "escape": true,
-        "on-click": "playerctl play-pause",
+        "align": 0,
+        "justify": "left",
+        "on-click": "f=\"${XDG_RUNTIME_DIR:-/tmp}/waybar-current-lyric\"; [ -s \"$f\" ] && wl-copy < \"$f\"",
         "on-click-right": "playerctl next",
         "on-scroll-up": "playerctl next",
         "on-scroll-down": "playerctl previous"

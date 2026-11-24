@@ -7,6 +7,7 @@ spawn-at-startup "firefox"
 window-rule {
     match at-startup=true app-id="firefox"
     open-on-workspace "dev"
+    default-column-width { proportion 0.90; }
 }
 
 spawn-at-startup "code"

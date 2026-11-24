@@ -7,6 +7,7 @@ spawn-at-startup "QQ"
 window-rule {
     match app-id="QQ"
     open-on-workspace "misc"
+    default-window-height { proportion 0.80; }
 }
 
 spawn-at-startup "clash-verge"
@@ -14,6 +15,7 @@ spawn-at-startup "clash-verge"
 window-rule {
     match app-id="clash-verge"
     open-on-workspace "misc"
+    default-window-height { proportion 0.80; }
 }
 
 window-rule {
