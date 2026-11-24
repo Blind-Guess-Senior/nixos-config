@@ -34,6 +34,7 @@
 
     kdePackages.dolphin
     kdePackages.filelight
+    kdePackages.konsole # for dolphin
     alacritty
 
     kdePackages.ark
