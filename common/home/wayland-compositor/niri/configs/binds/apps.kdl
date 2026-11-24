@@ -4,7 +4,7 @@ binds {
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     // Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
-    Mod+V { spawn "alacritty" "--class" "clipse-float" "-e" "clipse"; }
+    Mod+V { spawn "ringboard-egui" "toggle"; }
 
     F12 { spawn "ghostty" "+toggle-quick-terminal"; }
 }

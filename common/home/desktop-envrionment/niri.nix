@@ -30,7 +30,7 @@
     brightnessctl
     kdePackages.systemsettings
     networkmanagerapplet
-    clipse
+    ringboard-wayland
 
     kdePackages.dolphin
     kdePackages.filelight

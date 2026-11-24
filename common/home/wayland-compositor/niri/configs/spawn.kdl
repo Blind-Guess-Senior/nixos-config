@@ -10,7 +10,8 @@
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 
 // Clipboard
-spawn-at-startup "clipse" "-listen"
+spawn-at-startup "ringboard-server"
+spawn-sh-at-startup "sleep 0.5 && ringboard-wayland"
 
 // Drop terminal
 spawn-at-startup "ghostty" "--gtk-single-instance=true" "--initial-window=false"
