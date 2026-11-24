@@ -3,6 +3,7 @@
 // https://niri-wm.github.io/niri/Configuration:-Window-Rules
 
 include "window-rules/btop.kdl"
+include "window-rules/cc-switch.kdl"
 include "window-rules/clipse.kdl"
 include "window-rules/firefox.kdl"
 
