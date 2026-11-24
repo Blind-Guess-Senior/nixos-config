@@ -1,0 +1,27 @@
+# --- 后台常驻 ---
+gtk-single-instance = true
+
+# --- 快速终端位置与尺寸 ---
+quick-terminal-position = top
+quick-terminal-size = 48%, 99%
+
+# --- 行为与多屏 ---
+# 鼠标点外面自动收起（1.4.0 已修复手动切换后卡死的 Bug）
+quick-terminal-autohide = true
+# 跟随鼠标当前所在的屏幕弹出（可选 main 或 mouse）
+quick-terminal-screen = mouse
+# 按需获取焦点，不锁死其他窗口或启动器
+quick-terminal-keyboard-interactivity = on-demand
+# 层级：top（普通窗口之上）或 overlay（盖在全屏窗口之上）
+gtk-quick-terminal-layer = top
+# 给这个 layer 表面一个固定名字，方便 Niri 的 layer-rule 匹配
+gtk-quick-terminal-namespace = ghostty-quick-terminal
+
+# --- 内部留白与透明（对普通窗口也会生效）---
+window-padding-x = 14
+window-padding-y = 12
+window-padding-color = extend-always
+background-opacity = 0.75
+background-blur = true
+
+gtk-custom-css = /etc/nixos/common/home/ghostty/configs/style.css

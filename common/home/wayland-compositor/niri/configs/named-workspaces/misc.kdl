@@ -19,6 +19,6 @@ window-rule {
 }
 
 window-rule {
-    match app-id="^Alacritty$" title="musicfox"
+    match app-id="^musicfox$"
     open-on-workspace "misc"
 }

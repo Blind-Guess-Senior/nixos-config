@@ -22,6 +22,8 @@ layout {
         proportion 0.5
         proportion 0.66667
 
+        proportion 0.8
+
         // Fixed sets the width in logical pixels exactly.
         // fixed 1920
     }
@@ -151,5 +153,21 @@ layout {
         // right 64
         // top 64
         // bottom 64
+    }
+}
+
+layer-rule {
+    match namespace="^ghostty-quick-terminal$"
+
+    shadow {
+        on
+        softness 24
+        spread 0
+        offset x=0 y=4
+        color "#00000090"
+    }
+
+    background-effect {
+        blur true
     }
 }

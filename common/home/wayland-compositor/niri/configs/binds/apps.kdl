@@ -5,4 +5,6 @@ binds {
     // Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     Mod+V { spawn "alacritty" "--class" "clipse-float" "-e" "clipse"; }
+
+    F12 { spawn "ghostty" "+toggle-quick-terminal"; }
 }

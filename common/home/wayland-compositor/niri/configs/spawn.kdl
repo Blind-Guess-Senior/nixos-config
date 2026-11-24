@@ -11,3 +11,6 @@
 
 // Clipboard
 spawn-at-startup "clipse" "-listen"
+
+// Drop terminal
+spawn-at-startup "ghostty" "--gtk-single-instance=true" "--initial-window=false"

@@ -7,6 +7,7 @@
       portal = "niri-kde-mix";
     })
 
+    ../../../common/home/ghostty
     ../../../common/home/mako
     ../../../common/home/waybar
   ];
@@ -18,7 +19,7 @@
     enable = true;
     settings = {
       main = {
-        terminal = "${pkgs.alacritty}/bin/alacritty -T '{cmd}' -e {cmd}";
+        terminal = "${pkgs.alacritty}/bin/alacritty --class '{cmd}' -T '{cmd}' -e {cmd}";
       };
     };
   };
@@ -33,7 +34,6 @@
 
     kdePackages.dolphin
     kdePackages.filelight
-    kdePackages.konsole
     alacritty
 
     kdePackages.ark
