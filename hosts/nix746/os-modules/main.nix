@@ -25,8 +25,8 @@
     ../../../common/os/git
     ../../../common/os/gnupg
     ../../../common/os/kmscon
-    ../../../common/os/kwallet
     ../../../common/os/nix-ld
+    ../../../common/os/oo7
     ../../../common/os/openssh
     ../../../common/os/printing
     ../../../common/os/sops-nix

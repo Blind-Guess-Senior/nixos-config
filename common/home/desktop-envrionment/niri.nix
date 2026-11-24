@@ -4,7 +4,7 @@
   imports = [
     (utils.importWayland {
       compositor = "niri";
-      portal = "niri-kde-base";
+      portal = "niri-kde-mix";
     })
 
     ../../../common/home/mako
@@ -32,7 +32,6 @@
     clipse
 
     kdePackages.dolphin
-    kdePackages.kwalletmanager
     kdePackages.filelight
     kdePackages.konsole
     alacritty

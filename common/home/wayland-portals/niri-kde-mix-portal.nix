@@ -4,14 +4,14 @@
 
 /*
   Portal definitions for niri compositor with hybrid kde envrionment
-  Use kwallet as secret backend; kde as file chooser
+  Use oo7 as secret backend; kde as file chooser
 */
 let
   backends = with pkgs; [
     xdg-desktop-portal-gnome
     xdg-desktop-portal-gtk
     kdePackages.xdg-desktop-portal-kde
-    kdePackages.kwallet
+    oo7-portal
   ];
 
   portalPackages = [ pkgs.xdg-desktop-portal ] ++ backends;
@@ -30,7 +30,7 @@ in
       "org.freedesktop.impl.portal.Access" = "gtk";
       "org.freedesktop.impl.portal.Notification" = "gtk";
       "org.freedesktop.impl.portal.FileChooser" = "kde";
-      "org.freedesktop.impl.portal.Secret" = "kwallet";
+      "org.freedesktop.impl.portal.Secret" = "oo7-portal";
     };
   };
 
